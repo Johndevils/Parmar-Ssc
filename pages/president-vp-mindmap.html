@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>President & Vice-President – Mind Map | Parmar SSC</title>
+<style>
+:root{
+  --bg:#0d0f1a;--s:#141726;--card:#1a1e30;--border:#252a42;
+  --gold:#f5c842;--orange:#ff7c3a;--blue:#4fa3f7;--green:#3ecf8e;
+  --pink:#f06fa4;--purple:#9b7bf7;--teal:#2dd4bf;--text:#e8ecf5;--muted:#8892a8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.6}
+.header{background:linear-gradient(135deg,#1a1030,#0d1a2e);border-bottom:2px solid var(--gold);padding:28px 20px 20px;text-align:center}
+.header h1{font-size:clamp(20px,5vw,34px);font-weight:800;color:#fff}
+.header h1 span{color:var(--gold)}
+.header p{color:var(--muted);font-size:12px;margin-top:6px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid var(--border);align-items:center}
+.controls input{flex:1;min-width:160px;padding:7px 12px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px}
+.controls input::placeholder{color:var(--muted)}
+.btn{padding:6px 14px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--muted);cursor:pointer;font-size:12px;transition:.15s}
+.btn:hover{background:var(--border);color:var(--text)}
+.tree{padding:12px 16px 40px}
+ul{list-style:none;padding:0}
+.children{padding-left:20px;border-left:1px solid var(--border);margin-left:8px;margin-top:2px}
+.children.closed{display:none}
+.row{display:flex;align-items:flex-start;gap:0;padding:2px 0;cursor:pointer;border-radius:6px;transition:background .12s}
+.row:hover{background:rgba(255,255,255,.04)}
+.arrow{width:18px;min-width:18px;font-size:10px;color:var(--muted);padding-top:4px;text-align:center;transition:transform .15s;flex-shrink:0}
+.arrow.open{transform:rotate(90deg)}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:3px 10px 3px 6px;border-radius:20px;font-size:13px;flex-wrap:wrap;line-height:1.5}
+.badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;white-space:nowrap}
+.b-imp{background:rgba(245,200,66,.2);color:var(--gold)}
+.b-key{background:rgba(79,163,247,.2);color:var(--blue)}
+.b-warn{background:rgba(240,111,164,.2);color:var(--pink)}
+.b-ok{background:rgba(62,207,142,.2);color:var(--green)}
+.l0 .pill{background:var(--card);border:1.5px solid var(--gold);font-size:15px;font-weight:700;color:#fff}
+.lp .pill{background:rgba(155,123,247,.1);border:0.5px solid var(--purple);color:var(--purple)}
+.lt .pill{background:rgba(45,212,191,.1);border:0.5px solid var(--teal);color:var(--teal)}
+.la .pill{background:rgba(255,124,58,.1);border:0.5px solid var(--orange);color:var(--orange)}
+.lc .pill{background:rgba(240,111,164,.1);border:0.5px solid var(--pink);color:var(--pink)}
+.lb .pill{background:rgba(79,163,247,.1);border:0.5px solid var(--blue);color:var(--blue)}
+.lg .pill{background:rgba(62,207,142,.1);border:0.5px solid var(--green);color:var(--green)}
+.lr .pill{background:rgba(245,200,66,.1);border:0.5px solid var(--gold);color:var(--gold)}
+.l2 .pill,.l3 .pill{background:transparent;border:none;color:var(--text);padding-left:2px;font-size:13px;font-weight:400}
+.l3 .pill{color:var(--muted);font-size:12px}
+.hl .pill{background:rgba(245,200,66,.08)!important;border:1px solid var(--gold)!important}
+.dim{opacity:.25}
+mark{background:rgba(245,200,66,.3);border-radius:2px;color:var(--text)}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🇮🇳 President &amp; Vice-President — <span>Parmar SSC</span></h1>
+  <p>SSC CGL · CHSL · MTS · Railway NTPC · Group D — Complete Mind Map | Click nodes to expand · Search to filter</p>
+</div>
+<div class="controls">
+  <input type="text" id="srch" placeholder="🔍 Search any fact, article, name…" oninput="search(this.value)">
+  <button class="btn" onclick="setAll(true)">▼ Expand All</button>
+  <button class="btn" onclick="setAll(false)">▲ Collapse All</button>
+</div>
+<div class="tree"><ul id="root"></ul></div>
+<script>
+const T=[
+  {l:"🇮🇳 President & Vice-President of India", c:"l0", o:1, ch:[
+
+    {l:"📜 Constitutional Framework — Part V", c:"lp", o:1, ch:[
+      {l:"Part V of Constitution → divided into 5 Chapters", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Chapter 1 → Union Executive (President + VP + PM + CoM + AG)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Chapter 2 → Parliament (Art 79-122)", c:"l2"},
+      {l:"Chapter 3 → Legislative Powers of President (Art 123)", c:"l2"},
+      {l:"Chapter 4 → Union Judiciary (Art 124-147)", c:"l2"},
+      {l:"Chapter 5 → Comptroller & Auditor General (Art 148-151)", c:"l2"},
+      {l:"President Articles → Art 52-62 | Vice-President Articles → Art 63-71", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+
+    {l:"🏛 PRESIDENT — Basic Facts", c:"lp", o:1, ch:[
+      {l:"Art 52 → There shall be a President of India", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 53 → Executive Power of Union vests in President", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"President = Head of Country | First Citizen of India", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Nominal / Titular / De jure Head of Country", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Supreme Commander of Defence Forces (Army, Navy, Airforce)", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+
+    {l:"🗳 Election of President (Art 54-55)", c:"lb", o:0, ch:[
+      {l:"Art 54 → Elected by Electoral College", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Elected members of Lok Sabha + Rajya Sabha", c:"l3"},
+        {l:"Elected members of Legislative Assemblies of all States", c:"l3"},
+        {l:"+ UTs of Delhi and Puducherry", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"Nominated MPs → DO NOT participate in election", c:"l3", b:[{t:"TRAP",s:"b-imp"}]},
+        {l:"Members of Legislative Council → DO NOT participate", c:"l3", b:[{t:"TRAP",s:"b-imp"}]}
+      ]},
+      {l:"Art 55 → Manner of Election", c:"l2", ch:[
+        {l:"Indirect Election (NOT directly by people)", c:"l3", b:[{t:"IMP",s:"b-imp"}]},
+        {l:"Proportional Representation + Single Transferable Vote (STV)", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"Voting done by Secret Ballot", c:"l3"}
+      ]},
+      {l:"Vote Value of MLA = Total Population of State / (Total Elected MLAs x 1000)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Vote Value of MP = Total value of votes of all MLAs / Total elected MPs", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Electoral Quota = (Total valid votes / (vacancies+1)) + 1", c:"l2"}
+    ]},
+
+    {l:"📋 Qualifications & Conditions (Art 58-59)", c:"la", o:0, ch:[
+      {l:"Art 58 → Qualifications for President", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Must be citizen of India", c:"l3"},
+        {l:"Minimum age: 35 years", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"Qualified for election as member of Lok Sabha", c:"l3"},
+        {l:"Must NOT hold any office of profit", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"Office of profit NOT defined in Constitution", c:"l3"}
+      ]},
+      {l:"Art 59 → Conditions of Office", c:"l2", ch:[
+        {l:"Shall NOT be member of Parliament or State Legislature", c:"l3"},
+        {l:"If member → must vacate seat before appointment", c:"l3"},
+        {l:"Emoluments determined by Parliament; cannot be diminished during term", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"President, VP, PM, Governor are NOT considered Office of Profit", c:"l3", b:[{t:"TRAP",s:"b-imp"}]}
+      ]},
+      {l:"Art 57 → Eligible for re-election ANY number of times", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Naturalised citizen CAN become President", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+
+    {l:"🤝 Oath, Term & Vacancy (Art 56, 60, 62)", c:"lt", o:0, ch:[
+      {l:"Art 56 → Term = 5 Years", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Resign by addressing letter to → Vice-President", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 60 → Oath administered by Chief Justice of India (CJI)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"If CJI unavailable → Senior-most Judge of Supreme Court administers oath", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 62 → Vacancy Filling", c:"l2", ch:[
+        {l:"Normal term end → election before expiration of term", c:"l3"},
+        {l:"Vacancy due to death/resignation/removal → election within 6 months", c:"l3", b:[{t:"IMP",s:"b-imp"}]},
+        {l:"1st Acting: Vice-President | 2nd Acting: CJI | 3rd: Senior-most SC Judge", c:"l3", b:[{t:"IMP",s:"b-imp"}]},
+        {l:"Ex: Zakir Hussain died → V.V. Giri (Acting President) → M. Hidayatullah (CJI)", c:"l3", b:[{t:"KEY",s:"b-key"}]}
+      ]},
+      {l:"President immune from criminal proceedings during term", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Civil proceedings → can start after giving 2 months notice", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+
+    {l:"⚖ Impeachment of President (Art 61)", c:"lc", o:0, ch:[
+      {l:"Grounds of Removal → Violation of Constitution (not defined)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Charges can be initiated by EITHER house of Parliament", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Charges signed by → 1/4 members of that House", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"14 days notice must be given to the President", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Resolution passed by Special Majority → 2/3 of Total Membership of EACH House", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"All MPs (elected + nominated) participate in Impeachment", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"MLAs participate in ELECTION but NOT in Impeachment", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Impeachment borrowed from → USA", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Impeachment is a Quasi-judicial process", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"No President has been impeached till date", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+
+    {l:"🎖 Powers of President", c:"lb", o:0, ch:[
+      {l:"Art 72 → Pardoning Powers", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"1. Pardon → completely removes punishment AND conviction", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"2. Commutation → changes FORM of punishment", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"3. Remission → reduces punishment PERIOD", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"4. Respite → lessens punishment due to special conditions (e.g. pregnancy)", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"5. Reprieve → stay on execution for temporary duration", c:"l3", b:[{t:"KEY",s:"b-key"}]}
+      ]},
+      {l:"President CAN pardon death sentences + court-martial punishments", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Governor CANNOT pardon death sentences or court-martial (Governor power = Art 161)", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Kehar Singh vs UOI (1988) → Pardoning power NOT subject to judicial review unless arbitrary/mala fide", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Judicial Powers → Appoints CJI, SC judges, HC judges", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Can seek advice from SC on any law/fact; advice NOT binding on President", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+
+    {l:"🔷 VICE-PRESIDENT — Articles 63-71", c:"lp", o:0, ch:[
+      {l:"Art 63 → There shall be a VP of India", c:"l2"},
+      {l:"Art 64 → VP = ex-officio Chairman of Rajya Sabha", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"VP holds 2nd highest constitutional post", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"VP can act as President for MAXIMUM 6 months", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Art 65 → VP performs functions as Acting President in absence of President", c:"l2"},
+      {l:"Art 67 → Term = 5 Years | Resign to → President", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"VP continues in office until successor takes charge", c:"l2"}
+    ]},
+
+    {l:"🗳 Election of Vice-President (Art 66)", c:"lb", o:0, ch:[
+      {l:"Elected by Electoral College: ALL members of both Houses (LS + RS)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Nominated members ALSO included (unlike President election)", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Method: Proportional Representation + STV | Secret Ballot", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Required: 20 proposers + 20 electors as seconders", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Security deposit: Rs 15,000", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Qualification: Citizen of India | Age 35+ | Qualified for Rajya Sabha membership", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Shall NOT be member of Parliament or State Legislature", c:"l2"}
+    ]},
+
+    {l:"🗑 Removal of VP & Dispute (Art 67, 71)", c:"la", o:0, ch:[
+      {l:"Removal resolution initiated ONLY in Rajya Sabha", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Passed by Effective Majority in RS + Simple Majority in LS", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"14 days prior notice required", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 71 → All disputes related to P/VP elections → decided by Supreme Court (final)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 69 → VP Oath administered by → President", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"If election declared void by SC → acts done by P/VP before declaration are VALID", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Election cannot be challenged on ground that electoral college was incomplete", c:"l2"}
+    ]},
+
+    {l:"👤 Notable Presidents of India", c:"lc", o:0, ch:[
+      {l:"1. Dr. Rajendra Prasad (1950-62) → 1st & Longest serving President (12 years)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Dr. Zakir Hussain (1967-69) → 1st Muslim President | Died in Office (in harness)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"V.V. Giri (1969-74) → 1st Acting President later elected as President", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Fakhruddin Ali Ahmed (1974-77) → Died in Office | B.D. Jatti = Acting President", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Neelam Sanjiva Reddy → Only President elected UNOPPOSED", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Giani Zail Singh (1982-87) → 1st Sikh President", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"K.R. Narayanan → 1st Dalit President", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Dr. A.P.J. Abdul Kalam → 'Missile Man' + 'People's President'", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Pratibha Patil → 1st Women President of India", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Droupadi Murmu → 1st Tribal + 2nd Women President (2022-Present)", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+
+    {l:"👥 Notable Vice-Presidents of India", c:"lc", o:0, ch:[
+      {l:"Dr. Sarvepalli Radhakrishnan → 1st VP (1952-62) | Served TWICE as VP", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Dr. Zakir Hussain → 1st Muslim Vice-President", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"M. Hamid Ansari (2007-17) → Longest serving VP (10 years) | Served under 3 Presidents", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Current VP: Jagdeep Dhankhar (2022-2025) → C.P. Radhakrishnan (2025-Present)", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+
+    {l:"⚡ Ultra Quick Revision — Top 20 Facts", c:"lr", o:0, ch:[
+      {l:"1. President articles → Art 52-62 | VP articles → Art 63-71", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"2. President elected by Indirect Election (Electoral College)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"3. Nominated MPs do NOT vote in President election (but DO in Impeachment)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"4. MLAs vote in President Election but NOT in Impeachment", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"5. President Term = 5 years | Resign to → VP", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"6. Oath of President administered by CJI (if unavailable: Senior-most SC Judge)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"7. Impeachment: charges by 1/4 members | 14 days notice | 2/3 special majority", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"8. Impeachment borrowed from USA | Quasi-judicial | No President impeached yet", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"9. Vacancy → election within 6 months | Acting: VP → CJI → Senior-most SC Judge", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"10. 5 Pardoning Powers: Pardon, Commutation, Remission, Respite, Reprieve", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"11. Governor CANNOT pardon death sentence; President CAN", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"12. VP = ex-officio Chairman of Rajya Sabha | 2nd highest constitutional post", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"13. VP election → ALL MPs including Nominated (unlike President election)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"14. VP Oath → administered by President", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"15. VP removal → initiated ONLY in Rajya Sabha", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"16. VP can act as President for MAX 6 months only", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"17. Neelam Sanjiva Reddy → only unopposed President", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"18. M. Hamid Ansari → longest serving VP (10 yrs) | served under 3 Presidents", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"19. Droupadi Murmu → 1st Tribal + 2nd Women President", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"20. All P/VP election disputes → decided by Supreme Court (final)", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+
+    {l:"⚠ Commonly Confused Concepts", c:"lc", o:0, ch:[
+      {l:"Nominated MPs: NO vote in P-election ≠ YES participate in Impeachment", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"MLAs: YES in P-election ≠ NO in Impeachment", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"VP Oath → by President ≠ President Oath → by CJI", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"VP resign → to President ≠ President resign → to VP", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"VP election includes Nominated MPs ≠ President election excludes them", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"VP qualified for Rajya Sabha ≠ President qualified for Lok Sabha", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"VP removal initiated in RS only ≠ Impeachment can start in EITHER house", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Pardon removes conviction ALSO ≠ Commutation/Remission/Respite only change punishment", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Governor pardoning power = Art 161 ≠ President pardoning power = Art 72", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"VP can act as President MAX 6 months ≠ no time limit exists (wrong assumption)", c:"l2", b:[{t:"TRAP",s:"b-imp"}]}
+    ]},
+
+    {l:"🧠 Mnemonics & Memory Aids", c:"lg", o:0, ch:[
+      {l:"PrEEM TReQ-C-O-In-Time → Art 52=Pr, 53=E(Executive), 54=E(Election), 55=M(Manner), 56=T(Term), 57=Re, 58=Q, 59=C, 60=O, 61=In, 62=Time", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"PCRR Pardons: Pardon=Complete, Commutation=Change form, Remission=Reduce, Respite=special Reason, Reprieve=temporary", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"'VP is Chairman of RS' → VP = Vice = Second, RS = Rajya = Second chamber (both are SECOND)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"President resign → to VP (P gives to V, alphabetical order P → V)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"VP resign → to President (V gives back to P, reverse alphabetical)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Impeachment 1/4 sign → 14 days notice → 2/3 pass: remember 1/4, 14, 2/3", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Vacancy succession: V-C-S → VP → CJI → Senior-most SC judge", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"'Firsts': Muslim P = Zakir Hussain | Dalit P = Narayanan | Women P = Pratibha | Tribal P = Murmu | Sikh P = Zail Singh", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"'UNOPPOSED = U = Unique' → Neelam Sanjiva Reddy only unique President (unopposed)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Age 35 for both President AND VP (same age, easy to remember)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]}
+    ]}
+
+  ]}
+];
+
+function build(data,ul){
+  data.forEach(d=>{
+    const li=document.createElement('li');
+    li.style.marginBottom='3px';
+    const row=document.createElement('div');
+    row.className='row '+d.c;
+    const arr=document.createElement('span');
+    arr.className='arrow';
+    arr.textContent=d.ch&&d.ch.length?'▶':' ';
+    if(d.o)arr.classList.add('open');
+    const pill=document.createElement('span');
+    pill.className='pill';
+    const txt=document.createElement('span');
+    txt.className='ntext';
+    txt.textContent=d.l;
+    pill.appendChild(txt);
+    if(d.b){d.b.forEach(b=>{const s=document.createElement('span');s.className='badge '+b.s;s.textContent=b.t;pill.appendChild(s);});}
+    row.appendChild(arr);row.appendChild(pill);
+    li.appendChild(row);
+    if(d.ch&&d.ch.length){
+      const sub=document.createElement('ul');
+      sub.className='children'+(d.o?'':' closed');
+      build(d.ch,sub);
+      li.appendChild(sub);
+      row.addEventListener('click',()=>{
+        const cl=sub.classList.contains('closed');
+        sub.classList.toggle('closed',!cl);
+        arr.classList.toggle('open',cl);
+      });
+    }
+    ul.appendChild(li);
+  });
+}
+function setAll(open){
+  document.querySelectorAll('.children').forEach(e=>e.classList.toggle('closed',!open));
+  document.querySelectorAll('.arrow').forEach(a=>{if(a.textContent!=' ')a.classList.toggle('open',open);});
+}
+function search(q){
+  q=q.trim().toLowerCase();
+  const rows=document.querySelectorAll('.row');
+  if(!q){
+    rows.forEach(r=>{r.classList.remove('hl','dim');const t=r.querySelector('.ntext');t.innerHTML=t.textContent;});
+    return;
+  }
+  rows.forEach(r=>{
+    const t=r.querySelector('.ntext');
+    const raw=t.textContent;
+    if(raw.toLowerCase().includes(q)){
+      r.classList.add('hl');r.classList.remove('dim');
+      const re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+      t.innerHTML=raw.replace(re,'<mark>$1</mark>');
+      let p=r.closest('.children');
+      while(p){p.classList.remove('closed');const prev=p.previousElementSibling;if(prev){const a=prev.querySelector('.arrow');if(a)a.classList.add('open');}p=p.parentElement&&p.parentElement.closest('.children');}
+    } else {
+      r.classList.remove('hl');r.classList.add('dim');t.innerHTML=raw;
+    }
+  });
+}
+build(T,document.getElementById('root'));
+</script>
+</body>
+</html>

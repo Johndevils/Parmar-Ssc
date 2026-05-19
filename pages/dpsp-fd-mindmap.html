@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DPSP & Fundamental Duties – Mind Map | Parmar SSC</title>
+<style>
+:root{
+  --bg:#0d0f1a;--s:#141726;--card:#1a1e30;--border:#252a42;
+  --gold:#f5c842;--orange:#ff7c3a;--blue:#4fa3f7;--green:#3ecf8e;
+  --pink:#f06fa4;--purple:#9b7bf7;--teal:#2dd4bf;--text:#e8ecf5;--muted:#8892a8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.6}
+.header{background:linear-gradient(135deg,#1a1030,#0d1a2e);border-bottom:2px solid var(--gold);padding:28px 20px 20px;text-align:center}
+.header h1{font-size:clamp(18px,5vw,32px);font-weight:800;color:#fff}
+.header h1 span{color:var(--gold)}
+.header p{color:var(--muted);font-size:12px;margin-top:6px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid var(--border);align-items:center}
+.controls input{flex:1;min-width:160px;padding:7px 12px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px}
+.controls input::placeholder{color:var(--muted)}
+.btn{padding:6px 14px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--muted);cursor:pointer;font-size:12px;transition:.15s}
+.btn:hover{background:var(--border);color:var(--text)}
+.tree{padding:12px 16px 40px}
+ul{list-style:none;padding:0}
+.children{padding-left:20px;border-left:1px solid var(--border);margin-left:8px;margin-top:2px}
+.children.closed{display:none}
+.row{display:flex;align-items:flex-start;gap:0;padding:2px 0;cursor:pointer;border-radius:6px;transition:background .12s}
+.row:hover{background:rgba(255,255,255,.04)}
+.arrow{width:18px;min-width:18px;font-size:10px;color:var(--muted);padding-top:4px;text-align:center;transition:transform .15s;flex-shrink:0}
+.arrow.open{transform:rotate(90deg)}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:3px 10px 3px 6px;border-radius:20px;font-size:13px;flex-wrap:wrap;line-height:1.5}
+.badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;white-space:nowrap}
+.b-imp{background:rgba(245,200,66,.2);color:var(--gold)}
+.b-key{background:rgba(79,163,247,.2);color:var(--blue)}
+.b-warn{background:rgba(240,111,164,.2);color:var(--pink)}
+.b-ok{background:rgba(62,207,142,.2);color:var(--green)}
+.l0 .pill{background:var(--card);border:1.5px solid var(--gold);font-size:15px;font-weight:700;color:#fff}
+.lp .pill{background:rgba(155,123,247,.1);border:0.5px solid var(--purple);color:var(--purple)}
+.lt .pill{background:rgba(45,212,191,.1);border:0.5px solid var(--teal);color:var(--teal)}
+.la .pill{background:rgba(255,124,58,.1);border:0.5px solid var(--orange);color:var(--orange)}
+.lc .pill{background:rgba(240,111,164,.1);border:0.5px solid var(--pink);color:var(--pink)}
+.lb .pill{background:rgba(79,163,247,.1);border:0.5px solid var(--blue);color:var(--blue)}
+.lg .pill{background:rgba(62,207,142,.1);border:0.5px solid var(--green);color:var(--green)}
+.lr .pill{background:rgba(245,200,66,.1);border:0.5px solid var(--gold);color:var(--gold)}
+.l2 .pill,.l3 .pill{background:transparent;border:none;color:var(--text);padding-left:2px;font-size:13px;font-weight:400}
+.l3 .pill{color:var(--muted);font-size:12px}
+.hl .pill{background:rgba(245,200,66,.08)!important;border:1px solid var(--gold)!important}
+.dim{opacity:.25}
+mark{background:rgba(245,200,66,.3);border-radius:2px;color:var(--text)}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>⚖ DPSP &amp; Fundamental Duties — <span>Parmar SSC</span></h1>
+  <p>SSC CGL · CHSL · MTS · Railway NTPC · Group D — Complete Mind Map | Click nodes to expand · Search to filter</p>
+</div>
+<div class="controls">
+  <input type="text" id="srch" placeholder="🔍 Search any article, case, duty…" oninput="search(this.value)">
+  <button class="btn" onclick="setAll(true)">▼ Expand All</button>
+  <button class="btn" onclick="setAll(false)">▲ Collapse All</button>
+</div>
+<div class="tree"><ul id="root"></ul></div>
+<script>
+const T=[
+  {l:"⚖ DPSP & Fundamental Duties of India", c:"l0", o:1, ch:[
+
+    {l:"📜 DPSP — Salient Features", c:"lp", o:1, ch:[
+      {l:"Located in Part IV of Constitution | Art 36-51", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Non-justiciable → NOT legally enforceable by courts", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Concept borrowed from → Irish Constitution (Ireland)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Objective → establish social and economic democracy", c:"l2"},
+      {l:"Reflect vision of a Welfare State", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Have Moral and Political sanctions (NOT legal)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"B.R. Ambedkar → resemble Instrument of Instructions in GoI Act 1935", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Classification into Socialist/Gandhian/Liberal is NOT mentioned in Constitution", c:"l2", b:[{t:"TRAP",s:"b-imp"}]}
+    ]},
+
+    {l:"👤 Famous Quotes on DPSP", c:"lc", o:0, ch:[
+      {l:"B.N. Rau → 'Moral Precepts for the authorities of state'", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Granville Austin → 'Conscience of the Constitution'", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"K.T. Shah → 'Cheque payable by the bank at its own convenience'", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"K.C. Wheare → 'Manifesto of aims and aspirations'", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+
+    {l:"📋 All DPSP Articles (36–51)", c:"lb", o:0, ch:[
+      {l:"Art 36 → Definition of State (same as Art 12 in FRs)", c:"l2"},
+      {l:"Art 37 → Non-justiciable; duty of State to apply when making laws", c:"l2"},
+      {l:"Art 38 → State to secure Social Order for welfare (44th CA, 1978 added clause b: reduce inequality)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 39 → 6 sub-clauses: livelihood, fair resources, no wealth concentration, equal pay, workers/children health, children development (f added by 42nd CA,1976)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Art 39A → Equal Justice & Free Legal Aid to poor (42nd CA, 1976)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Art 40 → Organisation of Village Panchayats", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 41 → Right to Work, Education & Public Assistance", c:"l2"},
+      {l:"Art 42 → Just & Humane Working Conditions + Maternity Relief", c:"l2"},
+      {l:"Art 43 → Living Wages & Decent Working Conditions", c:"l2"},
+      {l:"Art 43A → Workers' Participation in Management of Industries (42nd CA, 1976)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 43B → Promotion of Cooperative Societies (97th CA, 2011)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 44 → Uniform Civil Code (UCC) throughout India", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Art 45 → Early Childhood Care & Education below age 6 (86th CA, 2002 changed focus)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 46 → Promotion of Educational & Economic interests of SCs, STs, Weaker sections", c:"l2"},
+      {l:"Art 47 → Raise Nutrition, Living Standards, Public Health + Prevent intoxicants", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 48 → Agriculture & Animal Husbandry; prohibit slaughter of cows, calves, useful cattle", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 48A → Protection of Environment, Forests & Wildlife (42nd CA, 1976)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 49 → Protection of Monuments & National Heritage", c:"l2"},
+      {l:"Art 50 → Separation of Judiciary from Executive", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 51 → Promotion of International Peace & Security; just relations with neighbours", c:"l2"}
+    ]},
+
+    {l:"🗂 Classification of DPSPs", c:"la", o:0, ch:[
+      {l:"Socio-Economic Principles", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Aim: social & economic welfare, equality, welfare state", c:"l3"},
+        {l:"Articles: 38, 39, 41, 42, 43, 43A, 47", c:"l3", b:[{t:"KEY",s:"b-key"}]}
+      ]},
+      {l:"Gandhian Principles", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Decentralized governance, self-sufficiency, equitable resources", c:"l3"},
+        {l:"Articles: 40, 43, 46, 47, 48", c:"l3", b:[{t:"KEY",s:"b-key"}]}
+      ]},
+      {l:"Liberal-Intellectual Principles", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Individual freedoms, rights, strong rational state", c:"l3"},
+        {l:"Articles: 44, 45, 48A, 49, 50, 51", c:"l3", b:[{t:"KEY",s:"b-key"}]}
+      ]}
+    ]},
+
+    {l:"📅 DPSPs Added by Amendments", c:"lt", o:0, ch:[
+      {l:"42nd CAA, 1976 → Art 39(f), 39A, 43A, 48A", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"39(f) → Children's healthy development", c:"l3"},
+        {l:"39A → Equal justice & free legal aid to poor", c:"l3"},
+        {l:"43A → Workers' participation in management", c:"l3"},
+        {l:"48A → Protect environment, safeguard wildlife", c:"l3"}
+      ]},
+      {l:"44th CA, 1978 → Art 38 (reduce inequality clause)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"86th CA, 2002 → Art 45 (Early childhood care below 6 yrs)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"97th CA, 2011 → Art 43B (Cooperative Societies)", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+
+    {l:"⚔ Landmark Cases: DPSP vs Fundamental Rights", c:"lc", o:0, ch:[
+      {l:"Champakam Dorairajan Case (1951)", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"FRs would PREVAIL over DPSPs", c:"l3"},
+        {l:"FRs are amendable", c:"l3"}
+      ]},
+      {l:"Golaknath Case (1967)", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Parliament CANNOT revoke/amend FRs", c:"l3"}
+      ]},
+      {l:"25th Amendment Act → inserted Art 31(c)", c:"l2", b:[{t:"KEY",s:"b-key"}], ch:[
+        {l:"Laws implementing Art 39(b) & 39(c) cannot be declared void for violating Art 14 & 19", c:"l3"},
+        {l:"Such laws cannot be questioned in court", c:"l3"}
+      ]},
+      {l:"Kesavananda Bharati Case (1973) — 13 Judges bench", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Parliament CAN amend FRs but CANNOT disturb Basic Structure", c:"l3"},
+        {l:"2nd provision of 25th Amendment (restricting judicial review) = unconstitutional", c:"l3"}
+      ]},
+      {l:"Minerva Mills Case (1980)", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Constitution founded on BEDROCK OF BALANCE between FRs and DPSPs", c:"l3"}
+      ]}
+    ]},
+
+    {l:"⚖ FRs vs DPSPs — Key Differences", c:"lb", o:0, ch:[
+      {l:"FRs = Negative obligations ≠ DPSPs = Positive obligations", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"FRs = Justiciable (enforceable) ≠ DPSPs = Non-justiciable", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"FRs → Political democracy ≠ DPSPs → Social/Economic welfare", c:"l2"},
+      {l:"FRs = Legal sanctions ≠ DPSPs = Moral/Political sanctions", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"FRs = Individual welfare ≠ DPSPs = Societal welfare", c:"l2"},
+      {l:"FRs: Court CAN invalidate laws ≠ DPSPs: Court CANNOT invalidate laws", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"FRs = Automatically enforceable ≠ DPSPs = Require legislative enactment", c:"l2"}
+    ]},
+
+    {l:"🛡 FUNDAMENTAL DUTIES — Part IVA (Art 51A)", c:"lp", o:0, ch:[
+      {l:"Borrowed from → USSR (Soviet Union)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Statutory and NON-enforceable", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"NOT originally part of Constitution", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Applicable to → Indian citizens ONLY (not foreigners)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Added by → 42nd CAA, 1976 | Initially 10 FDs added", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Currently 11 FDs | 11th added by 86th CAA, 2002 = Art 51A(k)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Added on recommendation of → Sardar Swarn Singh Committee", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+
+    {l:"📋 All 11 Fundamental Duties (Art 51A)", c:"la", o:0, ch:[
+      {l:"(a) Abide by Constitution; respect National Flag & National Anthem", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"(b) Cherish ideals that inspired national struggle for freedom", c:"l2"},
+      {l:"(c) Uphold sovereignty, unity & integrity of India", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"(d) Defend the country; render national service when called", c:"l2"},
+      {l:"(e) Promote harmony; brotherhood; renounce practices derogatory to women's dignity", c:"l2"},
+      {l:"(f) Value and preserve rich heritage of composite culture", c:"l2"},
+      {l:"(g) Protect & improve natural environment: forests, lakes, rivers, wildlife; compassion for living creatures", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"(h) Develop scientific temper, humanism, spirit of inquiry & reform", c:"l2"},
+      {l:"(i) Safeguard public property; abjure violence", c:"l2"},
+      {l:"(j) Strive towards excellence in all spheres of individual & collective activity", c:"l2"},
+      {l:"(k) Parent/guardian duty: provide education to child/ward between age 6-14 years [86th CA, 2002]", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+
+    {l:"⚖ Laws Enforcing Fundamental Duties", c:"lt", o:0, ch:[
+      {l:"Unlawful Activities Prevention Act 1967 → protects sovereignty & integrity → FD (c)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Prevention of Insults to National Honour Act 1971 → Flag & Anthem respect → FD (a)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Wildlife Protection Act 1972 → wild animals & birds protection → FD (g)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Representation of People Act 1951 → elections & democratic processes → FD (a)", c:"l2"},
+      {l:"IPC → crimes, public order, morality → FD (i) & (e)", c:"l2"},
+      {l:"Protection of Civil Rights Act 1955 → eliminates untouchability, promotes equality → FD (e)", c:"l2"},
+      {l:"Justice Verma Committee → identified legal provisions for implementing FDs in schools", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+
+    {l:"⚡ Ultra Quick Revision — Top 20 Facts", c:"lr", o:0, ch:[
+      {l:"1. DPSP = Part IV | Art 36-51 | Borrowed from Irish Constitution", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"2. DPSP = Non-justiciable (NOT enforceable in courts)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"3. DPSP have Moral & Political sanctions (NOT legal)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"4. Granville Austin → 'Conscience of Constitution'", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"5. K.T. Shah → 'Cheque payable by bank at its own convenience'", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"6. 42nd CAA 1976 → added Art 39(f), 39A, 43A, 48A to DPSP", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"7. 97th CA 2011 → Art 43B (Cooperative Societies) added", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"8. Champakam Case 1951 → FRs prevail over DPSPs", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"9. Golaknath Case 1967 → Parliament cannot amend FRs", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"10. Kesavananda Bharati 1973 → Parliament can amend FRs but not Basic Structure", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"11. Minerva Mills 1980 → Balance between FRs & DPSPs = bedrock of Constitution", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"12. FDs = Part IVA | Art 51A | Borrowed from USSR", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"13. FDs added by 42nd CAA 1976 | Initially 10 | Now 11", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"14. 11th FD = Art 51A(k) → added by 86th CAA 2002 (child education 6-14 yrs)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"15. FDs on recommendation of → Sardar Swarn Singh Committee", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"16. FDs applicable to citizens ONLY, NOT foreigners", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"17. FDs = Non-enforceable (Statutory but not enforceable)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"18. Justice Verma Committee → FDs implementation & teaching in schools", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"19. Classification of DPSPs (Socialist/Gandhian/Liberal) NOT mentioned in Constitution", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"20. Art 44 → Uniform Civil Code | Art 50 → Separation of Judiciary from Executive", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+
+    {l:"⚠ Commonly Confused Concepts", c:"lc", o:0, ch:[
+      {l:"DPSP from Ireland ≠ FDs from USSR (different source countries)", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"DPSP = Non-justiciable ≠ FRs = Justiciable (courts can enforce)", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"FDs apply to Citizens only ≠ FRs apply to foreigners also (some)", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Initially 10 FDs (1976) ≠ Currently 11 FDs (2002 added 11th)", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Golaknath (1967): Parliament CANNOT amend FRs ≠ Kesavananda (1973): CAN amend but not basic structure", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"DPSP have Moral sanctions ≠ FRs have Legal sanctions", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"42nd CAA added 4 DPSP Articles (39f, 39A, 43A, 48A) + FDs both — same amendment", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Art 45 originally = free education up to 14 yrs ≠ After 86th CA 2002 = early childhood care below 6 yrs", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"DPSP classification (3 types) is NOT in Constitution — it is academic classification only", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Swarn Singh Committee recommended FDs ≠ Verma Committee identified laws for implementation", c:"l2", b:[{t:"TRAP",s:"b-imp"}]}
+    ]},
+
+    {l:"🧠 Mnemonics & Memory Aids", c:"lg", o:0, ch:[
+      {l:"FD Trick (a to k): Anthem-Bhagat-3(sovereignty)-Defend-Equality-Fort(heritage)-Greenery-Humanism-Eye(no violence)-Jadeja(excellence)-Kids(education)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"DPSP source: 'Ireland is GREEN & welfare-ful' → Irish Constitution gave DPSP", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"FD source: 'USSR = Uncle Sam's Soviet Red' → FDs from USSR", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"42nd CAA 1976 = MEGA amendment: added DPSP (39f,39A,43A,48A) + FDs (10) both at once", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Granville Austin = 'Conscience' (G.A. = Great Author who gave a grand title)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"K.T. Shah = 'Cheque on convenience' (KT = 'Kab Tak' — like a cheque with no date)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Cases chronology: Champakam(1951) → Golaknath(1967) → 25th Amend → Kesavananda(1973) → Minerva Mills(1980)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Gandhian DPSP articles: 40,43,46,47,48 — remember 'Gandhi's Panchayat (40) in a village (43,46,47,48)'", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Socio-Economic articles: 38,39,41,42,43,43A,47 — remember 'welfare numbers cluster around 38-47'", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"97th CA 2011 = ONLY amendment after 2000 for DPSP → Art 43B Cooperative Societies", c:"l2", b:[{t:"TRICK",s:"b-ok"}]}
+    ]}
+
+  ]}
+];
+
+function build(data,ul){
+  data.forEach(d=>{
+    const li=document.createElement('li');
+    li.style.marginBottom='3px';
+    const row=document.createElement('div');
+    row.className='row '+d.c;
+    const arr=document.createElement('span');
+    arr.className='arrow';
+    arr.textContent=d.ch&&d.ch.length?'▶':' ';
+    if(d.o)arr.classList.add('open');
+    const pill=document.createElement('span');
+    pill.className='pill';
+    const txt=document.createElement('span');
+    txt.className='ntext';
+    txt.textContent=d.l;
+    pill.appendChild(txt);
+    if(d.b){d.b.forEach(b=>{const s=document.createElement('span');s.className='badge '+b.s;s.textContent=b.t;pill.appendChild(s);});}
+    row.appendChild(arr);row.appendChild(pill);
+    li.appendChild(row);
+    if(d.ch&&d.ch.length){
+      const sub=document.createElement('ul');
+      sub.className='children'+(d.o?'':' closed');
+      build(d.ch,sub);
+      li.appendChild(sub);
+      row.addEventListener('click',()=>{
+        const cl=sub.classList.contains('closed');
+        sub.classList.toggle('closed',!cl);
+        arr.classList.toggle('open',cl);
+      });
+    }
+    ul.appendChild(li);
+  });
+}
+function setAll(open){
+  document.querySelectorAll('.children').forEach(e=>e.classList.toggle('closed',!open));
+  document.querySelectorAll('.arrow').forEach(a=>{if(a.textContent!=' ')a.classList.toggle('open',open);});
+}
+function search(q){
+  q=q.trim().toLowerCase();
+  const rows=document.querySelectorAll('.row');
+  if(!q){
+    rows.forEach(r=>{r.classList.remove('hl','dim');const t=r.querySelector('.ntext');t.innerHTML=t.textContent;});
+    return;
+  }
+  rows.forEach(r=>{
+    const t=r.querySelector('.ntext');
+    const raw=t.textContent;
+    if(raw.toLowerCase().includes(q)){
+      r.classList.add('hl');r.classList.remove('dim');
+      const re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+      t.innerHTML=raw.replace(re,'<mark>$1</mark>');
+      let p=r.closest('.children');
+      while(p){p.classList.remove('closed');const prev=p.previousElementSibling;if(prev){const a=prev.querySelector('.arrow');if(a)a.classList.add('open');}p=p.parentElement&&p.parentElement.closest('.children');}
+    } else {
+      r.classList.remove('hl');r.classList.add('dim');t.innerHTML=raw;
+    }
+  });
+}
+build(T,document.getElementById('root'));
+</script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parliament Part 2 – Mind Map | Parmar SSC</title>
+<style>
+:root{
+  --bg:#0d0f1a;--s:#141726;--card:#1a1e30;--border:#252a42;
+  --gold:#f5c842;--orange:#ff7c3a;--blue:#4fa3f7;--green:#3ecf8e;
+  --pink:#f06fa4;--purple:#9b7bf7;--teal:#2dd4bf;--text:#e8ecf5;--muted:#8892a8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.6}
+.header{background:linear-gradient(135deg,#1a1030,#0d1a2e);border-bottom:2px solid var(--gold);padding:28px 20px 20px;text-align:center}
+.header h1{font-size:clamp(18px,5vw,32px);font-weight:800;color:#fff}
+.header h1 span{color:var(--gold)}
+.header p{color:var(--muted);font-size:12px;margin-top:6px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid var(--border);align-items:center}
+.controls input{flex:1;min-width:160px;padding:7px 12px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px}
+.controls input::placeholder{color:var(--muted)}
+.btn{padding:6px 14px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--muted);cursor:pointer;font-size:12px;transition:.15s}
+.btn:hover{background:var(--border);color:var(--text)}
+.tree{padding:12px 16px 40px}
+ul{list-style:none;padding:0}
+.children{padding-left:20px;border-left:1px solid var(--border);margin-left:8px;margin-top:2px}
+.children.closed{display:none}
+.row{display:flex;align-items:flex-start;gap:0;padding:2px 0;cursor:pointer;border-radius:6px;transition:background .12s}
+.row:hover{background:rgba(255,255,255,.04)}
+.arrow{width:18px;min-width:18px;font-size:10px;color:var(--muted);padding-top:4px;text-align:center;transition:transform .15s;flex-shrink:0}
+.arrow.open{transform:rotate(90deg)}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:3px 10px 3px 6px;border-radius:20px;font-size:13px;flex-wrap:wrap;line-height:1.5}
+.badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;white-space:nowrap}
+.b-imp{background:rgba(245,200,66,.2);color:var(--gold)}
+.b-key{background:rgba(79,163,247,.2);color:var(--blue)}
+.b-warn{background:rgba(240,111,164,.2);color:var(--pink)}
+.b-ok{background:rgba(62,207,142,.2);color:var(--green)}
+.l0 .pill{background:var(--card);border:1.5px solid var(--gold);font-size:15px;font-weight:700;color:#fff}
+.lp .pill{background:rgba(155,123,247,.1);border:0.5px solid var(--purple);color:var(--purple)}
+.lt .pill{background:rgba(45,212,191,.1);border:0.5px solid var(--teal);color:var(--teal)}
+.la .pill{background:rgba(255,124,58,.1);border:0.5px solid var(--orange);color:var(--orange)}
+.lc .pill{background:rgba(240,111,164,.1);border:0.5px solid var(--pink);color:var(--pink)}
+.lb .pill{background:rgba(79,163,247,.1);border:0.5px solid var(--blue);color:var(--blue)}
+.lg .pill{background:rgba(62,207,142,.1);border:0.5px solid var(--green);color:var(--green)}
+.lr .pill{background:rgba(245,200,66,.1);border:0.5px solid var(--gold);color:var(--gold)}
+.l2 .pill,.l3 .pill{background:transparent;border:none;color:var(--text);padding-left:2px;font-size:13px;font-weight:400}
+.l3 .pill{color:var(--muted);font-size:12px}
+.hl .pill{background:rgba(245,200,66,.08)!important;border:1px solid var(--gold)!important}
+.dim{opacity:.25}
+mark{background:rgba(245,200,66,.3);border-radius:2px;color:var(--text)}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🏛 Parliament Part 2 — <span>Parmar SSC</span></h1>
+  <p>SSC CGL · CHSL · MTS · Railway NTPC · Group D — Art 107–123 + Committees | Click to expand · Search to filter</p>
+</div>
+<div class="controls">
+  <input type="text" id="srch" placeholder="🔍 Search any article, bill, committee…" oninput="search(this.value)">
+  <button class="btn" onclick="setAll(true)">▼ Expand All</button>
+  <button class="btn" onclick="setAll(false)">▲ Collapse All</button>
+</div>
+<div class="tree"><ul id="root"></ul></div>
+<script>
+const T=[{l:"🏛 Parliament Part 2 — Art 107–123 + Committees",c:"l0",o:1,ch:[
+
+  {l:"📄 Types of Bills (Art 107)",c:"lp",o:1,ch:[
+    {l:"4 Types: Constitutional Amendment Bill | Ordinary Bill | Money Bill | Financial Bill",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Ordinary Bill — 2 sub-types",c:"l2",b:[{t:"KEY",s:"b-key"}],ch:[
+      {l:"Public Member Bill → 1 week prior notice required",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"Private Bill → 1 month prior notice | Brought by MP who is NOT a minister",c:"l3",b:[{t:"KEY",s:"b-key"}]}
+    ]},
+    {l:"Art 107(1) → Bill can originate in EITHER House EXCEPT Money Bill",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Art 107(2) → Bill passes if BOTH houses agree (with/without amendments)",c:"l2"},
+    {l:"Art 107(3) → Pending Bill does NOT lapse on adjournment or prorogation",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"Art 107(4) — Bill Lapsing Rules",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"Bill pending in LS → LAPSES on dissolution of LS",c:"l3",b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Bill pending in RS (not passed by LS) → does NOT lapse on LS dissolution",c:"l3",b:[{t:"TRAP",s:"b-imp"}]}
+    ]}
+  ]},
+
+  {l:"🤝 Joint Sitting of Both Houses (Art 108)",c:"lb",o:0,ch:[
+    {l:"Provision borrowed from → Australia",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Called by President when DEADLOCK between both houses",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"3 Conditions for Deadlock",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"1. Bill rejected by the other house",c:"l3"},
+      {l:"2. Houses finally disagree on amendments",c:"l3"},
+      {l:"3. More than 6 months elapse without other house passing the bill",c:"l3",b:[{t:"KEY",s:"b-key"}]}
+    ]},
+    {l:"Joint Sitting presided by → Speaker of Lok Sabha",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Absent Speaker → Deputy Speaker of LS | Absent both → Deputy Chairman of RS",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Chairman CANNOT preside Joint Sitting (not a member of either house)",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"Passed by → Simple Majority (members present & voting)",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Joint Sitting follows Rules of Lok Sabha",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Joint Sitting happened only 3 times",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"1. Dowry Prohibition Bill → 1960",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"2. Banking Services Commission Bill → 1977",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"3. Prevention of Terrorism Bill (POTA) → 2002",c:"l3",b:[{t:"KEY",s:"b-key"}]}
+    ]},
+    {l:"Exceptions — NO Joint Sitting allowed for",c:"l2",b:[{t:"TRAP",s:"b-imp"}],ch:[
+      {l:"Money Bill — because RS has NO equal power",c:"l3",b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Constitutional Amendment Bill — because special majority needed",c:"l3",b:[{t:"IMP",s:"b-imp"}]}
+    ]}
+  ]},
+
+  {l:"💰 Money Bill — Procedure & Definition (Art 109–111)",c:"lt",o:0,ch:[
+    {l:"Art 109(1) → Money Bill introduced ONLY in LS on recommendation of President",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Art 109(2) → RS must respond within 14 days (approve / suggest amendments / no action)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Art 109(3) → LS may accept or REJECT RS suggestions | If RS silent for 14 days → DEEMED passed",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Art 110 — Definition: Money Bill contains ONLY provisions related to",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"1. Imposition/abolition/remission/alteration/regulation of any TAX",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"2. Regulation of borrowings",c:"l3"},
+      {l:"3. Custody & audit of Consolidated Fund or Contingency Fund",c:"l3"},
+      {l:"4. Appropriation of money out of Consolidated Fund",c:"l3"},
+      {l:"5. Declaring any expenditure as Charged on Consolidated Fund",c:"l3"},
+      {l:"6. Receipt/custody/issue of money into Consolidated Fund or Public Account",c:"l3"},
+      {l:"7. Any matter incidental to the above",c:"l3"}
+    ]},
+    {l:"Art 111 → Speaker of LS certifies whether a Bill is a Money Bill",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Speaker's decision is FINAL | Normally not challenged | But judicial review IS allowed",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"NOT a Money Bill → if it imposes fine/tax by LOCAL AUTHORITY",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"All Money Bills are Financial Bills ≠ All Financial Bills are NOT Money Bills",c:"l2",b:[{t:"TRAP",s:"b-imp"}]}
+  ]},
+
+  {l:"✅ President's Assent & Veto Powers",c:"la",o:0,ch:[
+    {l:"After passed by both Houses → presented to President",c:"l2"},
+    {l:"President may: Give Assent (bill = law) OR Use Veto",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Veto Powers are NEGATIVE in nature",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"1. Suspensive Veto",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"Returns bill for reconsideration | If Parliament passes again → assent MANDATORY",c:"l3"},
+      {l:"NOT available for Money Bill (already introduced on President's recommendation)",c:"l3",b:[{t:"TRAP",s:"b-imp"}]}
+    ]},
+    {l:"2. Pocket Veto",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"President takes NO action | No time limit mentioned in Constitution",c:"l3"},
+      {l:"Indian President's pocket is DEEPER than USA's (no time limit vs USA's 10 days)",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"First used by → Gyani Zail Singh | Indian Post Office (Amendment) Bill 1986",c:"l3",b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+    {l:"3. Absolute Veto",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"President REJECTS the bill completely",c:"l3"},
+      {l:"Used for Private Member Bills when Cabinet doesn't support",c:"l3"}
+    ]},
+    {l:"No Veto for Constitutional Amendment Bill → 24th CA (Art 368)",c:"l2",b:[{t:"IMP",s:"b-imp"}]}
+  ]},
+
+  {l:"💸 Budget & Financial Procedure (Art 112–116)",c:"lp",o:0,ch:[
+    {l:"Art 112 → Annual Financial Statement (Budget) | Word 'Budget' NOT in Constitution",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"President causes budget to be laid before BOTH Houses",c:"l2"},
+    {l:"Art 113 — 2 Types of Expenditure",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"1. Charged on Consolidated Fund → NOT votable (President/SC Judge salaries etc.)",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"2. Made from Consolidated Fund → voted upon via Demands for Grants in LS",c:"l3",b:[{t:"KEY",s:"b-key"}]}
+    ]},
+    {l:"Only LS votes on Demands for Grants | RS can only discuss",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Demands for Grants presented on behalf of President",c:"l2"},
+    {l:"Art 114 → Appropriation Bill → authorises withdrawal from Consolidated Fund",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"No amendments or voting on Appropriation Bill amounts → passed as formality",c:"l2"},
+    {l:"Art 115 — Supplementary Grants",c:"l2",b:[{t:"KEY",s:"b-key"}],ch:[
+      {l:"Supplementary Grant → when amount authorised by Parliament is insufficient",c:"l3"},
+      {l:"Additional Grant → for new service not covered in original budget",c:"l3"},
+      {l:"Excess Grant → when money spent in excess of amount granted for a service",c:"l3"}
+    ]},
+    {l:"Art 116 — Vote on Account → advance drawn by Govt. before budget is passed",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Votes of Credit → blank cheque given to Executive by LS for urgent financial need",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"6 Stages of Budget Enactment",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"1. Presentation → 2. Discussion → 3. Scrutiny by Departmental Committees",c:"l3"},
+      {l:"4. Voting on Demands for Grants → 5. Appropriation Bill → 6. Finance Bill",c:"l3",b:[{t:"KEY",s:"b-key"}]}
+    ]}
+  ]},
+
+  {l:"✂ Cut Motions",c:"lc",o:0,ch:[
+    {l:"Moved during Voting on Demands for Grants in LS",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"1. Policy Cut → Reduce demand to ₹1 | To criticise Govt. policy",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"2. Economy Cut → Reduce by a specified amount | To suggest savings",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"3. Token Cut → Reduce by ₹100 | To raise a specific grievance",c:"l2",b:[{t:"IMP",s:"b-imp"}]}
+  ]},
+
+  {l:"🏦 3 Funds of India (Art 266–267)",c:"lb",o:0,ch:[
+    {l:"1. Consolidated Fund of India (Art 266(1))",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"Consists of: Tax revenues + other receipts",c:"l3"},
+      {l:"All expenditure authorised by Parliament comes from here",c:"l3"},
+      {l:"Most important fund | Requires Parliament approval for withdrawal",c:"l3",b:[{t:"KEY",s:"b-key"}]}
+    ]},
+    {l:"2. Public Account of India (Art 266(2))",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"Consists of: Remittances + Judicial deposits (public fund deposits)",c:"l3"},
+      {l:"Managed by Executive (NOT under direct Parliament control)",c:"l3",b:[{t:"KEY",s:"b-key"}]}
+    ]},
+    {l:"3. Contingency Fund of India (Art 267)",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"In hands of President | Run by President & Finance Secretary",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"Used for unforeseen expenditure | Requires Parliament approval after use",c:"l3"}
+    ]}
+  ]},
+
+  {l:"📜 Ordinance Making Power (Art 123)",c:"lt",o:0,ch:[
+    {l:"President can issue ordinance when EITHER or BOTH Houses are not in session",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Ordinance has same force as an Act of Parliament",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Must be laid before both Houses when they reassemble",c:"l2"},
+    {l:"Ordinance lapses after 6 weeks from reassembly if NOT approved",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Can be WITHDRAWN anytime by President",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Max Life = 6 months + 6 weeks (max gap between sessions = 6 months + 6 weeks for approval)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Ordinance CANNOT cover subjects beyond Parliament's legislative competence",c:"l2"},
+    {l:"Centre Ordinance = Art 123 | State Ordinance = Art 213 (by Governor)",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"If Approved → continues as law | If Disapproved → lapses",c:"l2"}
+  ]},
+
+  {l:"⭐ Special Powers of Rajya Sabha",c:"lp",o:0,ch:[
+    {l:"Art 249 → RS can authorise Parliament to make law on STATE LIST subject",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Art 312 → RS can authorise Parliament to CREATE a new All India Service",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"These 2 powers make RS powerful despite being weaker on Money Bills",c:"l2",b:[{t:"KEY",s:"b-key"}]}
+  ]},
+
+  {l:"🏢 Parliamentary Committees",c:"la",o:0,ch:[
+    {l:"Appointed by Speaker/Chairman | Works under their direction",c:"l2"},
+    {l:"Constitution mentions committees but NO specific provision on tenure/functions",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"All matters governed by Rules of Two Houses",c:"l2"},
+    {l:"2 Types: Permanent (Standing + Financial) | Temporary (Ad Hoc)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Financial Committees — Common features",c:"l2",b:[{t:"KEY",s:"b-key"}],ch:[
+      {l:"Election by Proportional Representation + STV",c:"l3"},
+      {l:"Term of members: 1 year",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"NO Minister can be a member (only private members)",c:"l3",b:[{t:"TRAP",s:"b-imp"}]}
+    ]},
+    {l:"Public Accounts Committee (PAC)",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"Established → 1921 via GoI Act 1919",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"Total members: 22 (15 from LS + 7 from RS)",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"Guide & Philosopher → CAG (submits reports analysed by PAC)",c:"l3",b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Function: Examine audit reports of CAG",c:"l3"}
+    ]},
+    {l:"Estimates Committee",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"Established: 1921 | Re-established post-independence: 1950",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"Re-established on recommendation of → John Mathai Committee",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"Total members: 30 (ALL from LS only) | Increased from 25 to 30 in 1956",c:"l3",b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Function: Examine estimates included in the Budget",c:"l3"}
+    ]},
+    {l:"Committee on Public Undertakings",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+      {l:"Established: 1964 on recommendation of → Krishna Menon Committee",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"Total members: 22 (15 from LS + 7 from RS) | Increased from 15 to 22 in 1974",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"Chairman is from → Lok Sabha",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"Function: Examine reports & accounts of Public Undertakings",c:"l3"}
+    ]},
+    {l:"Departmental Standing Committees",c:"l2",b:[{t:"KEY",s:"b-key"}],ch:[
+      {l:"Total: 24 (16 from LS + 8 from RS)",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+      {l:"Strength: 31 members (21 from LS + 10 from RS)",c:"l3"}
+    ]},
+    {l:"Speaker of LS = Chairman of: Business Advisory, Rules, General Purpose Committees",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Deputy Speaker → automatically becomes Chairman of any committee he is member of",c:"l2",b:[{t:"KEY",s:"b-key"}]}
+  ]},
+
+  {l:"🌐 Other Important Articles",c:"lc",o:0,ch:[
+    {l:"Art 118 → Each House makes own rules for procedure & conduct of business",c:"l2"},
+    {l:"Art 120 → Parliament business in Hindi or English | English to be removed after 15 years",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Art 121 → No discussion on conduct of SC/HC judges in Parliament",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Art 122 → No court can inquire into Parliament proceedings",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Art 86 → President can address either or both Houses; can send messages on pending Bills",c:"l2"},
+    {l:"Art 87 → President's Special Address: first session after general election + first session of each fiscal year",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Art 87 → Motion of Thanks follows the President's address",c:"l2"}
+  ]},
+
+  {l:"⚡ Ultra Quick Revision — Top 20 Facts",c:"lr",o:0,ch:[
+    {l:"1. Joint Sitting borrowed from Australia | Presided by Speaker of LS",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"2. Joint Sitting happened 3 times: Dowry(1960), Banking(1977), POTA(2002)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"3. NO Joint Sitting for Money Bill & Constitutional Amendment Bill",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"4. Money Bill: only in LS | RS must respond in 14 days | If silent → Deemed passed",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"5. Speaker certifies Money Bill | Decision final | Judicial review IS allowed",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"6. All Money Bills are Financial Bills ≠ All Financial Bills are NOT Money Bills",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"7. No Veto for Constitutional Amendment Bill — 24th CA Art 368",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"8. Pocket Veto first used by Gyani Zail Singh | Indian Post Office Bill 1986",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"9. Suspensive Veto NOT available for Money Bill",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"10. Word 'Budget' NOT mentioned in Constitution | Art 112 = Annual Financial Statement",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"11. Only LS votes on Demands for Grants | RS can only discuss",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"12. Cut Motions: Policy Cut=₹1 | Economy Cut=specified | Token Cut=₹100",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"13. 3 Funds: Consolidated (Art 266(1)) | Public Account (Art 266(2)) | Contingency (Art 267)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"14. Contingency Fund → held by President + Finance Secretary",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"15. Ordinance max life: 6 months + 6 weeks | Centre=Art 123 | State=Art 213",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"16. RS Special Powers: Art 249 (State List law) | Art 312 (All India Service)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"17. PAC: 22 members (15+7) | Est. 1921 | Guide = CAG",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"18. Estimates Committee: 30 members ALL from LS | Est. 1950 (John Mathai Committee)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"19. Committee on Public Undertakings: 22 members | Est. 1964 (Krishna Menon Committee)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"20. No Minister can be member of any Financial Committee",c:"l2",b:[{t:"IMP",s:"b-imp"}]}
+  ]},
+
+  {l:"⚠ Commonly Confused Concepts",c:"lc",o:0,ch:[
+    {l:"Bill in RS doesn't lapse on LS dissolution ≠ Bill in LS DOES lapse",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"Adjournment/Prorogation does NOT cause bill lapse ≠ Dissolution DOES (for LS bills)",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"Joint Sitting: Simple Majority ≠ CA Bill: Special Majority (that's why no JS allowed for CAB)",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"Chairman CANNOT preside JS (not member of either house) ≠ Speaker presides JS",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"RS has 14 days for Money Bill ≠ RS has equal say in Ordinary Bill",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"All Money Bills = Financial Bills ≠ All Financial Bills ≠ Money Bills",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"Suspensive Veto = returns for reconsideration ≠ Pocket Veto = no action (indefinite)",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"Consolidated Fund requires Parliament approval ≠ Public Account managed by Executive alone",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"Estimates Committee = ALL 30 from LS only ≠ PAC = 22 (15+7 LS+RS)",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"Ordinance max life = 6 months + 6 weeks ≠ just 6 months (common mistake)",c:"l2",b:[{t:"TRAP",s:"b-imp"}]}
+  ]},
+
+  {l:"🧠 Mnemonics & Memory Aids",c:"lg",o:0,ch:[
+    {l:"3 Joint Sittings: D-B-P = Dowry(1960), Banking(1977), Prevention of Terrorism(2002)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+    {l:"Money Bill 7 provisions: TAX-BAC-RE = Tax, borrow, Audit, Consolidated, Appropriation, Receipt, incidEntal",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+    {l:"3 Veto types: SPA = Suspensive(returns), Pocket(no action), Absolute(rejects)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+    {l:"3 Cut Motions: P-E-T = Policy(₹1), Economy(specified), Token(₹100) — PET your savings",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+    {l:"3 Funds: C-P-C = Consolidated(biggest), Public Account(executive), Contingency(President)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+    {l:"Ordinance life: '6+6' = 6 months gap + 6 weeks post-reassembly",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+    {l:"RS Special Powers: '2-4-9 & 3-1-2' = Art 249 (State list) & Art 312 (All India Service)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+    {l:"PAC Guide = CAG (both 3-letter govt. acronyms working together)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+    {l:"Estimates Committee: ALL 30 from LS → 'Estimates = LS ka homework (only they vote)'",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+    {l:"Krishna Menon Committee → Public Undertakings | John Mathai → Estimates (K comes before J alphabetically = 1964 before 1950? No → John first 1950, Krishna 1964)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]}
+  ]}
+
+]}];
+
+function build(data,ul){
+  data.forEach(d=>{
+    const li=document.createElement('li');
+    li.style.marginBottom='3px';
+    const row=document.createElement('div');
+    row.className='row '+d.c;
+    const arr=document.createElement('span');
+    arr.className='arrow';
+    arr.textContent=d.ch&&d.ch.length?'▶':' ';
+    if(d.o)arr.classList.add('open');
+    const pill=document.createElement('span');
+    pill.className='pill';
+    const txt=document.createElement('span');
+    txt.className='ntext';
+    txt.textContent=d.l;
+    pill.appendChild(txt);
+    if(d.b){d.b.forEach(b=>{const s=document.createElement('span');s.className='badge '+b.s;s.textContent=b.t;pill.appendChild(s);});}
+    row.appendChild(arr);row.appendChild(pill);
+    li.appendChild(row);
+    if(d.ch&&d.ch.length){
+      const sub=document.createElement('ul');
+      sub.className='children'+(d.o?'':' closed');
+      build(d.ch,sub);
+      li.appendChild(sub);
+      row.addEventListener('click',()=>{
+        const cl=sub.classList.contains('closed');
+        sub.classList.toggle('closed',!cl);
+        arr.classList.toggle('open',cl);
+      });
+    }
+    ul.appendChild(li);
+  });
+}
+function setAll(open){
+  document.querySelectorAll('.children').forEach(e=>e.classList.toggle('closed',!open));
+  document.querySelectorAll('.arrow').forEach(a=>{if(a.textContent!=' ')a.classList.toggle('open',open);});
+}
+function search(q){
+  q=q.trim().toLowerCase();
+  const rows=document.querySelectorAll('.row');
+  if(!q){
+    rows.forEach(r=>{r.classList.remove('hl','dim');const t=r.querySelector('.ntext');t.innerHTML=t.textContent;});
+    return;
+  }
+  rows.forEach(r=>{
+    const t=r.querySelector('.ntext');
+    const raw=t.textContent;
+    if(raw.toLowerCase().includes(q)){
+      r.classList.add('hl');r.classList.remove('dim');
+      const re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+      t.innerHTML=raw.replace(re,'<mark>$1</mark>');
+      let p=r.closest('.children');
+      while(p){p.classList.remove('closed');const prev=p.previousElementSibling;if(prev){const a=prev.querySelector('.arrow');if(a)a.classList.add('open');}p=p.parentElement&&p.parentElement.closest('.children');}
+    } else {
+      r.classList.remove('hl');r.classList.add('dim');t.innerHTML=raw;
+    }
+  });
+}
+build(T,document.getElementById('root'));
+</script>
+</body>
+</html>

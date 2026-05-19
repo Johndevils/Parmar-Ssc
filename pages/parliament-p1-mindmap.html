@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parliament Part 1 – Mind Map | Parmar SSC</title>
+<style>
+:root{
+  --bg:#0d0f1a;--s:#141726;--card:#1a1e30;--border:#252a42;
+  --gold:#f5c842;--orange:#ff7c3a;--blue:#4fa3f7;--green:#3ecf8e;
+  --pink:#f06fa4;--purple:#9b7bf7;--teal:#2dd4bf;--text:#e8ecf5;--muted:#8892a8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.6}
+.header{background:linear-gradient(135deg,#1a1030,#0d1a2e);border-bottom:2px solid var(--gold);padding:28px 20px 20px;text-align:center}
+.header h1{font-size:clamp(18px,5vw,32px);font-weight:800;color:#fff}
+.header h1 span{color:var(--gold)}
+.header p{color:var(--muted);font-size:12px;margin-top:6px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid var(--border);align-items:center}
+.controls input{flex:1;min-width:160px;padding:7px 12px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px}
+.controls input::placeholder{color:var(--muted)}
+.btn{padding:6px 14px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--muted);cursor:pointer;font-size:12px;transition:.15s}
+.btn:hover{background:var(--border);color:var(--text)}
+.tree{padding:12px 16px 40px}
+ul{list-style:none;padding:0}
+.children{padding-left:20px;border-left:1px solid var(--border);margin-left:8px;margin-top:2px}
+.children.closed{display:none}
+.row{display:flex;align-items:flex-start;gap:0;padding:2px 0;cursor:pointer;border-radius:6px;transition:background .12s}
+.row:hover{background:rgba(255,255,255,.04)}
+.arrow{width:18px;min-width:18px;font-size:10px;color:var(--muted);padding-top:4px;text-align:center;transition:transform .15s;flex-shrink:0}
+.arrow.open{transform:rotate(90deg)}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:3px 10px 3px 6px;border-radius:20px;font-size:13px;flex-wrap:wrap;line-height:1.5}
+.badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;white-space:nowrap}
+.b-imp{background:rgba(245,200,66,.2);color:var(--gold)}
+.b-key{background:rgba(79,163,247,.2);color:var(--blue)}
+.b-warn{background:rgba(240,111,164,.2);color:var(--pink)}
+.b-ok{background:rgba(62,207,142,.2);color:var(--green)}
+.l0 .pill{background:var(--card);border:1.5px solid var(--gold);font-size:15px;font-weight:700;color:#fff}
+.lp .pill{background:rgba(155,123,247,.1);border:0.5px solid var(--purple);color:var(--purple)}
+.lt .pill{background:rgba(45,212,191,.1);border:0.5px solid var(--teal);color:var(--teal)}
+.la .pill{background:rgba(255,124,58,.1);border:0.5px solid var(--orange);color:var(--orange)}
+.lc .pill{background:rgba(240,111,164,.1);border:0.5px solid var(--pink);color:var(--pink)}
+.lb .pill{background:rgba(79,163,247,.1);border:0.5px solid var(--blue);color:var(--blue)}
+.lg .pill{background:rgba(62,207,142,.1);border:0.5px solid var(--green);color:var(--green)}
+.lr .pill{background:rgba(245,200,66,.1);border:0.5px solid var(--gold);color:var(--gold)}
+.l2 .pill,.l3 .pill{background:transparent;border:none;color:var(--text);padding-left:2px;font-size:13px;font-weight:400}
+.l3 .pill{color:var(--muted);font-size:12px}
+.hl .pill{background:rgba(245,200,66,.08)!important;border:1px solid var(--gold)!important}
+.dim{opacity:.25}
+mark{background:rgba(245,200,66,.3);border-radius:2px;color:var(--text)}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🏛 Parliament Part 1 — <span>Parmar SSC</span></h1>
+  <p>SSC CGL · CHSL · MTS · Railway NTPC · Group D — Art 79–106 | Click to expand · Search to filter</p>
+</div>
+<div class="controls">
+  <input type="text" id="srch" placeholder="🔍 Search any article, name, fact…" oninput="search(this.value)">
+  <button class="btn" onclick="setAll(true)">▼ Expand All</button>
+  <button class="btn" onclick="setAll(false)">▲ Collapse All</button>
+</div>
+<div class="tree"><ul id="root"></ul></div>
+<script>
+const T=[
+  {l:"🏛 Parliament of India — Part 1 (Art 79–106)", c:"l0", o:1, ch:[
+
+    {l:"📜 Constitution of Parliament (Art 79)", c:"lp", o:1, ch:[
+      {l:"Parliament = President + Lok Sabha + Rajya Sabha", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Parliamentary System borrowed from → UK (Westminster Model)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Part V of Constitution covers Parliament → Art 79-122", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"President = integral part of Parliament; No Bill becomes law without his assent", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+
+    {l:"🟢 LOK SABHA — House of People (Art 81)", c:"lb", o:1, ch:[
+      {l:"Non-Permanent House | 1st Chamber | Lower House", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Hindi name 'Lok Sabha' adopted in 1954", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Constituted on: 17 April 1952 | First sitting: 13 May 1952", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Members directly elected by citizens", c:"l2"},
+      {l:"Green colour = India is agricultural land, elected from grassroots", c:"l2"},
+      {l:"Total seats: 550 (530 from States + 20 from UTs)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Present strength: 543 elected members", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"104th CAA 2019 removed nomination of 2 Anglo-Indians (Art 331)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"UP = most LS seats (80) | West Bengal = 42 | Bihar = 40 | Maharashtra = 48", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Tenure: 5 years | Can be extended during national emergency (1 year at a time)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Max gap between two sessions → 6 months", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+
+    {l:"🔴 RAJYA SABHA — Council of States (Art 80)", c:"lt", o:0, ch:[
+      {l:"Permanent House | 2nd Chamber | Upper House | House of Elders", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Hindi name 'Rajya Sabha' adopted in 1954", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Constituted on: 3 April 1952 | First sitting: 13 May 1952", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Represents States | Red colour = royalty & freedom fighters' sacrifice", c:"l2"},
+      {l:"Total members: 250 (238 elected + 12 nominated by President)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Present strength: 245 (233 elected + 12 nominated) | 5 seats vacant (PoK, Aksai Chin)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"12 nominated → from Literature, Science, Arts, Social Service (LISAS)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Members indirectly elected by → Proportional Representation + STV", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Election of RS members → borrowed from South Africa", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Nomination of RS members → taken from Ireland", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Unequal representation (based on population of State)", c:"l2"},
+      {l:"UP = 31 | West Bengal = 16 | Bihar = 16 | Maharashtra = 19 | Tamil Nadu = 18", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Permanent body → NOT subject to dissolution", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"1/3rd members retire every 2 years | Each member's term = 6 years", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+
+    {l:"🔢 Composition & Numbers at a Glance", c:"la", o:0, ch:[
+      {l:"LS: Total 550 | Present 543 | Min age 25 yrs | Term 5 yrs", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"RS: Total 250 | Present 245 | Min age 30 yrs | Term 6 yrs", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"RS: 12 nominated (LISAS) + 233 elected | LS: 543 elected", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Quorum: 1/10th of total strength of each House (Art 100)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Delimitation Commission after every Census (10 years) — Art 82", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"42nd CA 1976 → seats frozen on 1971 Census till 2000", c:"l2"},
+      {l:"84th CA 2001 → Freeze extended till 2026", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"87th CA 2003 → Delimitation per 2001 Census", c:"l2"}
+    ]},
+
+    {l:"📋 Qualifications & Disqualifications", c:"lp", o:0, ch:[
+      {l:"Art 84 — Qualifications", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Must be citizen of India", c:"l3"},
+        {l:"Min age: 25 yrs (LS) | 30 yrs (RS)", c:"l3", b:[{t:"IMP",s:"b-imp"}]},
+        {l:"Other qualifications as prescribed by Parliament", c:"l3"}
+      ]},
+      {l:"Art 102 — Disqualifications", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Holds office of profit under Union or State Govt.", c:"l3"},
+        {l:"Unsound mind (declared by competent court)", c:"l3"},
+        {l:"Undischarged insolvent", c:"l3"},
+        {l:"Not a citizen of India", c:"l3"},
+        {l:"RPA 1951: Jail for more than 2 years = disqualification", c:"l3", b:[{t:"KEY",s:"b-key"}]}
+      ]},
+      {l:"Art 102(2) — 10th Schedule (Anti-Defection)", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Independent member joins any political party → disqualified", c:"l3"},
+        {l:"Nominated member joins party after 6 months → disqualified", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"Votes contrary to party direction → disqualified", c:"l3"},
+        {l:"Voluntarily gives up party membership → disqualified", c:"l3"},
+        {l:"Exception: Merger — when 2/3rd members leave & join another party (91st CA 2003)", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"Kihoto Hollohan vs Zachilhu: Judiciary CAN review Speaker's final decision on defection", c:"l3", b:[{t:"KEY",s:"b-key"}]}
+      ]},
+      {l:"Art 103 — President's decision on disqualification is FINAL (after ECI opinion)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 104 — Penalty for sitting/voting while disqualified → Rs 500 per day", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 101 — Absent without permission for 60 days → seat may be declared vacant", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+
+    {l:"🪑 Presiding Officers — Rajya Sabha (Art 89–92)", c:"lc", o:0, ch:[
+      {l:"Chairman of RS → Vice President of India (ex-officio)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Chairman is NOT a member of RS", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Deputy Chairman → elected by Rajya Sabha | IS a member of RS", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Deputy Chairman resignation → to Chairman | Removal → Effective Majority of RS", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"When both Chairman + DC absent → Panel of Vice-Chairpersons (appointed by Chairman) presides", c:"l2"},
+      {l:"P.T. Usha → first woman appointed in RS Panel of Vice-Chairpersons", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 92 → During their own removal: they CAN participate but CANNOT preside", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Chairman has NO casting vote (not a member) | DC has casting vote only in tie", c:"l2", b:[{t:"TRAP",s:"b-imp"}]}
+    ]},
+
+    {l:"🪑 Presiding Officers — Lok Sabha (Art 93–96)", c:"lc", o:0, ch:[
+      {l:"Speaker & Deputy Speaker → elected by LS members by Simple Majority", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"First Speaker → Ganesh Vasudev Mavalankar", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"First Deputy Speaker → M.A. Ayyangar", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"No Deputy Speaker appointed since 2019", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Speaker resignation → to Deputy Speaker | DS resignation → to Speaker", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Removal of Speaker → by Effective Majority", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Speaker continues till new Speaker is elected (does NOT immediately resign after LS dissolution)", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Art 96 → During own removal: can participate, CANNOT preside; has first-instance vote but NO casting vote", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Deputy Speaker is NOT subordinate to Speaker", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Date of Speaker election fixed by → President | DS election fixed by → Speaker", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Protem Speaker → senior-most member; appointed by President to administer oath to new members", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+
+    {l:"📅 Sessions, Motions & Procedures (Art 85)", c:"lt", o:0, ch:[
+      {l:"3 Sessions: Budget (Feb-Apr) | Monsoon (Jul-Aug) | Winter (Dec)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Sessions summoned by → President (on advice of CoM)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Prorogation → ends a session (by President)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Dissolution → formal termination of current LS (by President)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Adjournment → temporary break within session (by Presiding Officer)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Adjournment Sine Die → ends session without fixing next date (by Presiding Officer)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Session Routine: 11AM start | 11-12: Question Hour | 12-1: Zero Hour", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Adjournment Motion → urgent public importance; needs support of 50 members", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Closure Motion → to cut short debate on a matter", c:"l2"},
+      {l:"Call Attention Motion → member calls attention of a minister on public importance", c:"l2"},
+      {l:"Point of Order → when proceedings don't follow normal rules; NO debate allowed", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+
+    {l:"❓ Types of Questions in Parliament", c:"la", o:0, ch:[
+      {l:"Starred Question → Oral answer; supplementary questions allowed", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Unstarred Question → Written answer only; NO supplementary questions", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Short Notice Question → 10 days prior notice required", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Questions can be asked to private members too (private member = not a minister)", c:"l2"}
+    ]},
+
+    {l:"⚡ Motions — No-Confidence vs Censure", c:"lb", o:0, ch:[
+      {l:"No-Confidence Motion", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"No reason required", c:"l3"},
+        {l:"Against entire Council of Ministers ONLY", c:"l3"},
+        {l:"Tests majority support (confidence) of LS in CoM", c:"l3"},
+        {l:"If passed → RESIGNATION is mandatory", c:"l3", b:[{t:"IMP",s:"b-imp"}]}
+      ]},
+      {l:"Censure Motion", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Reason MUST be stated", c:"l3"},
+        {l:"Can be against individual, group, or entire council", c:"l3"},
+        {l:"Targets specific policies/actions", c:"l3"},
+        {l:"If passed → NO resignation required", c:"l3", b:[{t:"TRAP",s:"b-imp"}]}
+      ]}
+    ]},
+
+    {l:"🛡 Powers, Privileges & Immunities (Art 105)", c:"lp", o:0, ch:[
+      {l:"Freedom of speech in Parliament (Art 105(1))", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"No Parliamentary proceedings can be questioned in ANY court (Art 105(2))", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"No MP liable for anything said or vote given in Parliament", c:"l2"},
+      {l:"Art 105(3) → Protection from CIVIL arrest: during session + 40 days before & after", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"This protection does NOT apply to criminal arrest or preventive detention", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Art 106 → Salaries & allowances of members fixed by Parliament", c:"l2"},
+      {l:"Art 88 → AG has right to speak in both Houses but NO right to vote", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Art 99 → Every member takes oath before President or person appointed by him", c:"l2"}
+    ]},
+
+    {l:"👤 Key Persons & Firsts", c:"lc", o:0, ch:[
+      {l:"First Speaker of LS → Ganesh Vasudev Mavalankar", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"First Deputy Speaker of LS → M.A. Ayyangar", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"P.T. Usha → 1st woman in RS Panel of Vice-Chairpersons", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Protem Speaker 2024 → Bhartruhari Mehtab (24 Jun - 26 Jun 2024)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Kihoto Hollohan vs Zachilhu → judiciary can review Speaker's defection decision", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+
+    {l:"⚡ Ultra Quick Revision — Top 20 Facts", c:"lr", o:0, ch:[
+      {l:"1. Parliament = President + LS + RS | Part V Art 79-122", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"2. LS = 543 seats | RS = 245 | LS total capacity 550 | RS total capacity 250", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"3. RS: 12 nominated by President (LISAS) | Election from South Africa | Nomination from Ireland", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"4. LS min age 25 | RS min age 30 | LS term 5 yrs | RS member term 6 yrs", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"5. RS = Permanent; 1/3rd retire every 2 years | LS = dissolves after 5 yrs", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"6. 104th CAA 2019 → removed Anglo-Indian nomination (Art 331)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"7. Quorum = 1/10th of total strength of each House (Art 100)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"8. Max gap between 2 sessions = 6 months", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"9. Chairman of RS = VP of India (NOT member of RS) | No casting vote", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"10. First Speaker → Mavalankar | First DS → Ayyangar | No DS since 2019", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"11. Speaker continues even after LS dissolution till new Speaker elected", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"12. No-confidence → whole CoM | If passed → MUST resign | No reason needed", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"13. Censure → individual/group/CoM | Reason MUST be stated | No resignation if passed", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"14. Starred = Oral + supplementary | Unstarred = Written only | Short Notice = 10 days", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"15. Adjournment Motion → urgent public importance; needs 50 members' support", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"16. MP protection: Civil arrest only; 40 days before/after + during session; NOT criminal", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"17. AG → can speak in both Houses; CANNOT vote in either", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"18. Defection exception → 2/3rd merger (91st CA 2003)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"19. Absent without permission 60 days → seat may be declared vacant", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"20. 84th CA 2001 → Delimitation freeze extended till 2026", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+
+    {l:"⚠ Commonly Confused Concepts", c:"lc", o:0, ch:[
+      {l:"LS constituted: 17 Apr 1952 ≠ First sitting: 13 May 1952 (same date for both LS & RS first sitting)", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"RS constituted: 3 Apr 1952 ≠ LS constituted: 17 Apr 1952", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Chairman of RS (VP) = NOT member of RS ≠ Deputy Chairman = IS member of RS", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"No-confidence: only against whole CoM ≠ Censure: can be against individual too", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"No-confidence passed → must resign ≠ Censure passed → no resignation required", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Civil arrest protection applies 40 days before & after ≠ criminal arrest NOT protected", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Speaker has NO casting vote during own removal ≠ does have 1st instance vote", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"RS = 250 total ≠ present strength 245 (5 vacant for PoK etc.)", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Deputy Speaker NOT subordinate to Speaker ≠ common assumption otherwise", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Protem Speaker appointed by President ≠ regular Speaker elected by LS members", c:"l2", b:[{t:"TRAP",s:"b-imp"}]}
+    ]},
+
+    {l:"🧠 Mnemonics & Memory Aids", c:"lg", o:0, ch:[
+      {l:"LS vs RS ages: 'Lower house is YOUNGER (25) | Upper house is OLDER (30)'", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"RS 12 nominated: LISAS = Literature, Science, Arts, Social Service", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"'RS is like wine → older term (6 yrs) | LS is like milk → shorter term (5 yrs)'", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"RS election source = South Africa; Nomination source = Ireland: 'SA elects, Ireland nominates'", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"No-confidence: 'NO reason, NO choice (must resign)' | Censure: 'C = Choice (can stay)'", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Starred = Star performers speak (oral) | Unstarred = Under the table (written)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Quorum = 1/10th → '10% minimum to start the show'", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Question Hour: 11-12 | Zero Hour: 12-1 → 'Questions come first, Zero is Zero (no rules)'", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Sessions: BWM → Budget(Feb), Water/Monsoon(Jul), Month-end/Winter(Dec)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Defection merger: 2/3rd → 'Two-thirds to defect legally (like a supermajority escape hatch)'", c:"l2", b:[{t:"TRICK",s:"b-ok"}]}
+    ]}
+
+  ]}
+];
+
+function build(data,ul){
+  data.forEach(d=>{
+    const li=document.createElement('li');
+    li.style.marginBottom='3px';
+    const row=document.createElement('div');
+    row.className='row '+d.c;
+    const arr=document.createElement('span');
+    arr.className='arrow';
+    arr.textContent=d.ch&&d.ch.length?'▶':' ';
+    if(d.o)arr.classList.add('open');
+    const pill=document.createElement('span');
+    pill.className='pill';
+    const txt=document.createElement('span');
+    txt.className='ntext';
+    txt.textContent=d.l;
+    pill.appendChild(txt);
+    if(d.b){d.b.forEach(b=>{const s=document.createElement('span');s.className='badge '+b.s;s.textContent=b.t;pill.appendChild(s);});}
+    row.appendChild(arr);row.appendChild(pill);
+    li.appendChild(row);
+    if(d.ch&&d.ch.length){
+      const sub=document.createElement('ul');
+      sub.className='children'+(d.o?'':' closed');
+      build(d.ch,sub);
+      li.appendChild(sub);
+      row.addEventListener('click',()=>{
+        const cl=sub.classList.contains('closed');
+        sub.classList.toggle('closed',!cl);
+        arr.classList.toggle('open',cl);
+      });
+    }
+    ul.appendChild(li);
+  });
+}
+function setAll(open){
+  document.querySelectorAll('.children').forEach(e=>e.classList.toggle('closed',!open));
+  document.querySelectorAll('.arrow').forEach(a=>{if(a.textContent!=' ')a.classList.toggle('open',open);});
+}
+function search(q){
+  q=q.trim().toLowerCase();
+  const rows=document.querySelectorAll('.row');
+  if(!q){
+    rows.forEach(r=>{r.classList.remove('hl','dim');const t=r.querySelector('.ntext');t.innerHTML=t.textContent;});
+    return;
+  }
+  rows.forEach(r=>{
+    const t=r.querySelector('.ntext');
+    const raw=t.textContent;
+    if(raw.toLowerCase().includes(q)){
+      r.classList.add('hl');r.classList.remove('dim');
+      const re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+      t.innerHTML=raw.replace(re,'<mark>$1</mark>');
+      let p=r.closest('.children');
+      while(p){p.classList.remove('closed');const prev=p.previousElementSibling;if(prev){const a=prev.querySelector('.arrow');if(a)a.classList.add('open');}p=p.parentElement&&p.parentElement.closest('.children');}
+    } else {
+      r.classList.remove('hl');r.classList.add('dim');t.innerHTML=raw;
+    }
+  });
+}
+build(T,document.getElementById('root'));
+</script>
+</body>
+</html>

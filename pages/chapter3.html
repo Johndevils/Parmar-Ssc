@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preamble of India – Mind Map | Parmar SSC</title>
+<style>
+:root{
+  --bg:#0d0f1a;--s:#141726;--card:#1a1e30;--border:#252a42;
+  --gold:#f5c842;--orange:#ff7c3a;--blue:#4fa3f7;--green:#3ecf8e;
+  --pink:#f06fa4;--purple:#9b7bf7;--teal:#2dd4bf;--text:#e8ecf5;--muted:#8892a8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.6}
+.header{background:linear-gradient(135deg,#1a1030,#0d1a2e);border-bottom:2px solid var(--gold);padding:28px 20px 20px;text-align:center}
+.header h1{font-size:clamp(20px,5vw,34px);font-weight:800;color:#fff}
+.header h1 span{color:var(--gold)}
+.header p{color:var(--muted);font-size:12px;margin-top:6px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid var(--border);align-items:center}
+.controls input{flex:1;min-width:160px;padding:7px 12px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px}
+.controls input::placeholder{color:var(--muted)}
+.btn{padding:6px 14px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--muted);cursor:pointer;font-size:12px;transition:.15s}
+.btn:hover{background:var(--border);color:var(--text)}
+.tree{padding:12px 16px 40px}
+ul{list-style:none;padding:0}
+.children{padding-left:20px;border-left:1px solid var(--border);margin-left:8px;margin-top:2px}
+.children.closed{display:none}
+.row{display:flex;align-items:flex-start;gap:0;padding:2px 0;cursor:pointer;border-radius:6px;transition:background .12s}
+.row:hover{background:rgba(255,255,255,.04)}
+.arrow{width:18px;min-width:18px;font-size:10px;color:var(--muted);padding-top:4px;text-align:center;transition:transform .15s;flex-shrink:0}
+.arrow.open{transform:rotate(90deg)}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:3px 10px 3px 6px;border-radius:20px;font-size:13px;flex-wrap:wrap;line-height:1.5}
+.badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;white-space:nowrap}
+.b-imp{background:rgba(245,200,66,.2);color:var(--gold)}
+.b-key{background:rgba(79,163,247,.2);color:var(--blue)}
+.b-warn{background:rgba(240,111,164,.2);color:var(--pink)}
+.b-ok{background:rgba(62,207,142,.2);color:var(--green)}
+.l0 .pill{background:var(--card);border:1.5px solid var(--gold);font-size:15px;font-weight:700;color:#fff}
+.lp .pill{background:rgba(155,123,247,.1);border:0.5px solid var(--purple);color:var(--purple)}
+.lt .pill{background:rgba(45,212,191,.1);border:0.5px solid var(--teal);color:var(--teal)}
+.la .pill{background:rgba(255,124,58,.1);border:0.5px solid var(--orange);color:var(--orange)}
+.lc .pill{background:rgba(240,111,164,.1);border:0.5px solid var(--pink);color:var(--pink)}
+.lb .pill{background:rgba(79,163,247,.1);border:0.5px solid var(--blue);color:var(--blue)}
+.lg .pill{background:rgba(62,207,142,.1);border:0.5px solid var(--green);color:var(--green)}
+.lr .pill{background:rgba(245,200,66,.1);border:0.5px solid var(--gold);color:var(--gold)}
+.l2 .pill,.l3 .pill{background:transparent;border:none;color:var(--text);padding-left:2px;font-size:13px;font-weight:400}
+.l3 .pill{color:var(--muted);font-size:12px}
+.hl .pill{background:rgba(245,200,66,.08)!important;border:1px solid var(--gold)!important}
+.dim{opacity:.25}
+mark{background:rgba(245,200,66,.3);border-radius:2px;color:var(--text)}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>🏛 Preamble of India — <span>Parmar SSC</span></h1>
+  <p>SSC CGL · CHSL · MTS · Railway NTPC · Group D — Complete Mind Map | Click nodes to expand · Search to filter</p>
+</div>
+<div class="controls">
+  <input type="text" id="srch" placeholder="🔍 Search any fact, date, name…" oninput="search(this.value)">
+  <button class="btn" onclick="setAll(true)">▼ Expand All</button>
+  <button class="btn" onclick="setAll(false)">▲ Collapse All</button>
+</div>
+<div class="tree"><ul id="root"></ul></div>
+<script>
+const T=[
+  {l:"🏛 Preamble of India", c:"l0", o:1, ch:[
+    {l:"📜 Basic Concepts", c:"lp", o:1, ch:[
+      {l:"Preamble = Preface / Introduction to the Constitution", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Contains the summary / essence of the Constitution", c:"l2"},
+      {l:"Tells us about the philosophy of the Constitution", c:"l2"},
+      {l:"Made AFTER the entire Constitution was compiled", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Modified version of Objective Resolution by J.L. Nehru (to Constituent Assembly)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Source of power: WE THE PEOPLE OF INDIA — power from people, not king", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"NOT enforceable in Court of Law", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Not a source of Power, nor a Restriction on Legislature", c:"l2"},
+      {l:"Can be used as AID to legal interpretation of Constitution", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+    {l:"🌐 Sources — Borrowed From", c:"lb", o:1, ch:[
+      {l:"Concept of Preamble → USA", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Language of Preamble → Australia", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Justice (Social, Economic, Political) → Russia", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Liberty + Equality + Fraternity + Republic → France", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+    {l:"🔑 Keywords — SSDDR Explained", c:"lp", o:0, ch:[
+      {l:"S — Sovereign", c:"l2", ch:[
+        {l:"Supreme right on internal + external matters", c:"l3"},
+        {l:"No external power can dictate Govt. of India", c:"l3", b:[{t:"KEY",s:"b-key"}]}
+      ]},
+      {l:"S — Socialist", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Wealth generated socially → shared equally by society", c:"l3"},
+        {l:"Govt. regulates land & industry ownership to reduce inequalities", c:"l3"},
+        {l:"India = Mixed Economy | USA = Capitalist | Russia = Socialist example", c:"l3", b:[{t:"KEY",s:"b-key"}]}
+      ]},
+      {l:"S — Secular", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Freedom to follow ANY religion or no religion", c:"l3"},
+        {l:"No official State Religion in India", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"India = POSITIVE secularism: State can involve in religious matters", c:"l3", b:[{t:"IMP",s:"b-imp"}]}
+      ]},
+      {l:"D — Democratic", c:"l2", ch:[
+        {l:"Govt. by constitutional rules & principles", c:"l3"},
+        {l:"A Govt. Of the People, By the People, For the People", c:"l3", b:[{t:"KEY",s:"b-key"}]}
+      ]},
+      {l:"R — Republic", c:"l2", ch:[
+        {l:"Head of State = ELECTED by people, NOT hereditary", c:"l3", b:[{t:"IMP",s:"b-imp"}]},
+        {l:"UK is NOT a Republic (hereditary monarchy)", c:"l3", b:[{t:"TRAP",s:"b-imp"}]}
+      ]}
+    ]},
+    {l:"🎯 Objectives — JELF", c:"la", o:0, ch:[
+      {l:"Justice", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"3 types: Social | Economic | Political", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"No discrimination: caste, religion, gender", c:"l3"},
+        {l:"Concept from: Russia", c:"l3", b:[{t:"IMP",s:"b-imp"}]}
+      ]},
+      {l:"Liberty", c:"l2", ch:[
+        {l:"5 forms: Thought | Expression | Belief | Faith | Worship", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"Concept from: France", c:"l3", b:[{t:"IMP",s:"b-imp"}]}
+      ]},
+      {l:"Equality", c:"l2", ch:[
+        {l:"2 types: Status | Opportunity", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"All equal before law; traditional inequalities must end", c:"l3"},
+        {l:"Concept from: France", c:"l3", b:[{t:"IMP",s:"b-imp"}]}
+      ]},
+      {l:"Fraternity", c:"l2", ch:[
+        {l:"All citizens = members of same family; no one inferior", c:"l3"},
+        {l:"Ensures dignity of individual + unity & integrity of nation", c:"l3", b:[{t:"KEY",s:"b-key"}]}
+      ]}
+    ]},
+    {l:"👤 Key Persons", c:"lc", o:0, ch:[
+      {l:"Beohar Rammanohar Sinha → designed & decorated the Preamble", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"J.L. Nehru → presented Objective Resolution (basis of Preamble)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Indira Gandhi → PM during 42nd Amendment 1976 (Emergency period)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"N. A. Palkhivala → 'Identity Card of the Constitution'", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"K. M. Munshi → 'Political Horoscope of the Constitution'", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Pt. Thakur Das → called Preamble a 'Jewel Set'", c:"l2", b:[{t:"KEY",s:"b-key"}]}
+    ]},
+    {l:"📅 Timeline — Cases & Amendment", c:"lt", o:0, ch:[
+      {l:"26 Nov 1949 → Constitution Adopted & Enacted by Constituent Assembly", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"26 Jan 1950 → Constitution Enforced (Republic Day)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"1960 → Berubari Union Case", c:"l2", b:[{t:"KEY",s:"b-key"}], ch:[
+        {l:"SC: Preamble NOT a part of Constitution", c:"l3"},
+        {l:"SC: Cannot be amended | Just a KEY to understand Constitution", c:"l3"},
+        {l:"SC: NOT legally enforceable", c:"l3"}
+      ]},
+      {l:"1973 → Kesavananda Bharati Case", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Bench of 13 Judges gave verdict", c:"l3", b:[{t:"KEY",s:"b-key"}]},
+        {l:"Preamble IS a part of Constitution → CAN be amended", c:"l3", b:[{t:"IMP",s:"b-imp"}]},
+        {l:"Preamble reflects Basic Structure of Constitution", c:"l3"}
+      ]},
+      {l:"1976 → 42nd Constitutional Amendment Act", c:"l2", b:[{t:"IMP",s:"b-imp"}], ch:[
+        {l:"Added 3 words: Socialist | Secular | Integrity", c:"l3", b:[{t:"IMP",s:"b-imp"}]},
+        {l:"During Emergency | PM: Indira Gandhi", c:"l3"}
+      ]},
+      {l:"1995 → LIC of India Case → Reaffirmed Kesavananda ruling", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Preamble amended only ONCE → 1976 via 42nd CAA", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+    {l:"🔢 Numbers & Stats", c:"la", o:0, ch:[
+      {l:"Justice types → 3 (Social, Economic, Political)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Liberty forms → 5 (Thought, Expression, Belief, Faith, Worship)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Equality types → 2 (Status, Opportunity)", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Words added by 42nd CAA → 3 (Socialist, Secular, Integrity)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"Kesavananda Bharati bench → 13 Judges", c:"l2", b:[{t:"KEY",s:"b-key"}]},
+      {l:"Preamble amended → Only 1 time (1976)", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+    {l:"⚡ Ultra Quick Revision — Top 20 Facts", c:"lr", o:0, ch:[
+      {l:"1. Concept of Preamble from → USA", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"2. Language of Preamble from → Australia", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"3. Socialist + Secular + Integrity added by 42nd Amendment → 1976", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"4. PM during 42nd Amendment → Indira Gandhi (Emergency period)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"5. Preamble designed & decorated by → Beohar Rammanohar Sinha", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"6. Based on → Objective Resolution by J.L. Nehru", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"7. Berubari Case (1960) → Preamble NOT part of Constitution", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"8. Kesavananda Bharati Case (1973) → Preamble IS part | 13 judges bench", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"9. LIC of India Case (1995) → Reaffirmed Kesavananda ruling", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"10. Preamble amended only ONCE → 1976", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"11. 3 types of Justice → Social, Economic, Political (from Russia)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"12. 5 forms of Liberty → Thought, Expression, Belief, Faith, Worship", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"13. 2 types of Equality → Status, Opportunity (from France)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"14. N.A. Palkhivala → Identity Card of Constitution", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"15. K.M. Munshi → Political Horoscope of Constitution", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"16. Preamble NOT enforceable in Court of Law", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"17. Republic → Head of State is ELECTED (not hereditary)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"18. India Secular = Positive concept (State can involve in religious matters)", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"19. Preamble made AFTER entire Constitution was compiled", c:"l2", b:[{t:"IMP",s:"b-imp"}]},
+      {l:"20. Liberty + Equality + Fraternity + Republic all from France | Justice from Russia", c:"l2", b:[{t:"IMP",s:"b-imp"}]}
+    ]},
+    {l:"⚠ Commonly Confused Concepts", c:"lc", o:0, ch:[
+      {l:"Adopted: 26 Nov 1949 ≠ Enforced: 26 Jan 1950", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Berubari (1960): NOT part ≠ Kesavananda (1973): IS part of Constitution", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Preamble NOT enforceable ≠ Fundamental Rights ARE enforceable in court", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"UK is NOT Republic ≠ India IS Republic", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"India = Mixed Economy ≠ USA (Capitalist) ≠ Russia (Socialist)", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"India Secular = Positive (State CAN intervene) ≠ Western = Negative (cannot)", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"42nd CAA added 3 words (Socialist, Secular, Integrity) — NOT just 2", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Concept from USA ≠ Language from Australia — two different things", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Justice from Russia ≠ Equality/Liberty from France — common confusion", c:"l2", b:[{t:"TRAP",s:"b-imp"}]},
+      {l:"Preamble is NOT a source of power to legislature NOR a restriction", c:"l2", b:[{t:"TRAP",s:"b-imp"}]}
+    ]},
+    {l:"🧠 Mnemonics & Memory Aids", c:"lg", o:0, ch:[
+      {l:"SSDDR → Sovereign Socialist Secular Democratic Republic (5 keywords)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"JELF → Justice, Equality, Liberty, Fraternity (4 objectives)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"USA gave the IDEA, Australia gave the WORDS", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"France = FREEDOM country → Liberty + Equality + Fraternity + Republic all French", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Russia = RED = Justice (communist/red country gave Justice concept)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"42nd CAA = SSI added during Emergency: Socialist, Secular, Integrity", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Berubari(B) before Kesavananda(K) → B said NO, K said YES (part of constitution)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"5 Liberty forms → TEB-FW: Thought, Expression, Belief, Faith, Worship", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"3 Justice types → SEP: Social, Economic, Political", c:"l2", b:[{t:"TRICK",s:"b-ok"}]},
+      {l:"Kesavananda = 13 judges (unlucky number, but LUCKY for Preamble — became part!)", c:"l2", b:[{t:"TRICK",s:"b-ok"}]}
+    ]}
+  ]}
+];
+
+function build(data,ul){
+  data.forEach(d=>{
+    const li=document.createElement('li');
+    li.style.marginBottom='3px';
+    const row=document.createElement('div');
+    row.className='row '+d.c;
+    const arr=document.createElement('span');
+    arr.className='arrow';
+    arr.textContent=d.ch&&d.ch.length?'▶':' ';
+    if(d.o)arr.classList.add('open');
+    const pill=document.createElement('span');
+    pill.className='pill';
+    const txt=document.createElement('span');
+    txt.className='ntext';
+    txt.textContent=d.l;
+    pill.appendChild(txt);
+    if(d.b){d.b.forEach(b=>{const s=document.createElement('span');s.className='badge '+b.s;s.textContent=b.t;pill.appendChild(s);});}
+    row.appendChild(arr);row.appendChild(pill);
+    li.appendChild(row);
+    if(d.ch&&d.ch.length){
+      const sub=document.createElement('ul');
+      sub.className='children'+(d.o?'':' closed');
+      build(d.ch,sub);
+      li.appendChild(sub);
+      row.addEventListener('click',()=>{
+        const cl=sub.classList.contains('closed');
+        sub.classList.toggle('closed',!cl);
+        arr.classList.toggle('open',cl);
+      });
+    }
+    ul.appendChild(li);
+  });
+}
+function setAll(open){
+  document.querySelectorAll('.children').forEach(e=>e.classList.toggle('closed',!open));
+  document.querySelectorAll('.arrow').forEach(a=>{if(a.textContent!=' ')a.classList.toggle('open',open);});
+}
+function search(q){
+  q=q.trim().toLowerCase();
+  const rows=document.querySelectorAll('.row');
+  if(!q){
+    rows.forEach(r=>{r.classList.remove('hl','dim');const t=r.querySelector('.ntext');t.innerHTML=t.textContent;});
+    return;
+  }
+  rows.forEach(r=>{
+    const t=r.querySelector('.ntext');
+    const raw=t.textContent;
+    if(raw.toLowerCase().includes(q)){
+      r.classList.add('hl');r.classList.remove('dim');
+      const re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+      t.innerHTML=raw.replace(re,'<mark>$1</mark>');
+      let p=r.closest('.children');
+      while(p){p.classList.remove('closed');const prev=p.previousElementSibling;if(prev){const a=prev.querySelector('.arrow');if(a)a.classList.add('open');}p=p.parentElement&&p.parentElement.closest('.children');}
+    } else {
+      r.classList.remove('hl');r.classList.add('dim');t.innerHTML=raw;
+    }
+  });
+}
+build(T,document.getElementById('root'));
+</script>
+</body>
+</html>
