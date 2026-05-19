@@ -1,25 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Table of Contents</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parmar SSC Notes - Indian Constitution</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>📚 Parmar SSC Mindmaps</h1>
-        <div class="subtitle">Interactive Reading Experience</div>
+        <header>
+            <h1><i class="fas fa-landmark"></i> Parmar SSC Notes</h1>
+            <p class="subtitle">Master Indian Constitution for SSC Exams</p>
+        </header>
 
-        <ul>
-            <li><a href="pages/chapter1.html" data-chapter="Chapter 1">Chapter 1: Making Constitution</a></li>
-            <li><a href="pages/chapter2.html" data-chapter="Chapter 2">Chapter 2: Silent Features of Indian Constitution</a></li>
-            <li><a href="pages/chapter3.html" data-chapter="Chapter 3">Chapter 3: Preamble</a></li>
-        </ul>
+        <main class="cards-container">
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>Chapter 1: The Beginning</h3>
+                <p>Foundation & Historical Background</p>
+                <a href="pages/chapter1.html" class="btn-link">
+                    Start Learning <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
 
-        <div class="decorative-line">✦ ✦ ✦</div>
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-road"></i>
+                </div>
+                <h3>Chapter 2: The Journey</h3>
+                <p>Making of Constitution & Debates</p>
+                <a href="pages/chapter2.html" class="btn-link">
+                    Continue Learning <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-flag"></i>
+                </div>
+                <h3>Chapter 3: The Conclusion</h3>
+                <p>Final Draft & Implementation</p>
+                <a href="pages/chapter3.html" class="btn-link">
+                    Finish Learning <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3>DPSP & Fundamental Rights</h3>
+                <p>Directive Principles & Rights Mindmap</p>
+                <a href="pages/dpsp-fd-mindmap.html" class="btn-link">
+                    View Mindmap <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-institution"></i>
+                </div>
+                <h3>Parliament - Part 1</h3>
+                <p>Lok Sabha & Rajya Sabha Structure</p>
+                <a href="pages/parliament-p1-mindmap.html" class="btn-link">
+                    Explore <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Parliament - Part 2</h3>
+                <p>Parliamentary Procedures</p>
+                <a href="pages/parliament-p2-mindmap.html" class="btn-link">
+                    Explore <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3>President & Vice President</h3>
+                <p>Executive Branch Overview</p>
+                <a href="pages/president-vp-mindmap.html" class="btn-link">
+                    Learn More <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </main>
 
         <footer>
-            <p>Happy Reading! 📖</p>
+            <div class="footer-content">
+                <p>&copy; <span id="year"></span> Parmar SSC Notes. All rights reserved for educational use.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
         </footer>
     </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Add interactivity to cards
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('touchstart', function() {
+                this.classList.add('active');
+            });
+
+            card.addEventListener('touchend', function() {
+                setTimeout(() => this.classList.remove('active'), 200);
+            });
+        });
+    </script>
 </body>
 </html>
