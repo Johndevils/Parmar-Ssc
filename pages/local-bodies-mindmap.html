@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Local Bodies – Mind Map</title>
+<style>
+:root{
+  --bg:#0d0f1a;--s:#141726;--card:#1a1e30;--border:#252a42;
+  --gold:#f5c842;--orange:#ff7c3a;--blue:#4fa3f7;--green:#3ecf8e;
+  --pink:#f06fa4;--purple:#9b7bf7;--teal:#2dd4bf;--text:#e8ecf5;--muted:#8892a8;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;font-size:14px;line-height:1.6}
+.header{background:linear-gradient(135deg,#1a1030,#0d1a2e);border-bottom:2px solid var(--gold);padding:28px 20px 20px;text-align:center}
+.header h1{font-size:clamp(20px,5vw,34px);font-weight:800;color:#fff}
+.header h1 span{color:var(--gold)}
+.header p{color:var(--muted);font-size:12px;margin-top:6px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;padding:14px 16px;border-bottom:1px solid var(--border);align-items:center}
+.controls input{flex:1;min-width:160px;padding:7px 12px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px}
+.controls input::placeholder{color:var(--muted)}
+.btn{padding:6px 14px;border:1px solid var(--border);border-radius:8px;background:var(--card);color:var(--muted);cursor:pointer;font-size:12px;transition:.15s}
+.btn:hover{background:var(--border);color:var(--text)}
+.tree{padding:12px 16px 40px}
+ul{list-style:none;padding:0}
+.children{padding-left:20px;border-left:1px solid var(--border);margin-left:8px;margin-top:2px}
+.children.closed{display:none}
+.row{display:flex;align-items:flex-start;gap:0;padding:2px 0;cursor:pointer;border-radius:6px;transition:background .12s}
+.row:hover{background:rgba(255,255,255,.04)}
+.arrow{width:18px;min-width:18px;font-size:10px;color:var(--muted);padding-top:4px;text-align:center;transition:transform .15s;flex-shrink:0}
+.arrow.open{transform:rotate(90deg)}
+.pill{display:inline-flex;align-items:center;gap:5px;padding:3px 10px 3px 6px;border-radius:20px;font-size:13px;flex-wrap:wrap;line-height:1.5}
+.badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:10px;white-space:nowrap}
+.b-imp{background:rgba(245,200,66,.2);color:var(--gold)}
+.b-key{background:rgba(79,163,247,.2);color:var(--blue)}
+.b-warn{background:rgba(240,111,164,.2);color:var(--pink)}
+.b-ok{background:rgba(62,207,142,.2);color:var(--green)}
+.l0 .pill{background:var(--card);border:1.5px solid var(--gold);font-size:15px;font-weight:700;color:#fff}
+.lp .pill{background:rgba(155,123,247,.1);border:0.5px solid var(--purple);color:var(--purple)}
+.lt .pill{background:rgba(45,212,191,.1);border:0.5px solid var(--teal);color:var(--teal)}
+.la .pill{background:rgba(255,124,58,.1);border:0.5px solid var(--orange);color:var(--orange)}
+.lc .pill{background:rgba(240,111,164,.1);border:0.5px solid var(--pink);color:var(--pink)}
+.lb .pill{background:rgba(79,163,247,.1);border:0.5px solid var(--blue);color:var(--blue)}
+.lg .pill{background:rgba(62,207,142,.1);border:0.5px solid var(--green);color:var(--green)}
+.lr .pill{background:rgba(245,200,66,.1);border:0.5px solid var(--gold);color:var(--gold)}
+.l2 .pill,.l3 .pill{background:transparent;border:none;color:var(--text);padding-left:2px;font-size:13px;font-weight:400}
+.l3 .pill{color:var(--muted);font-size:12px}
+.hl .pill{background:rgba(245,200,66,.08)!important;border:1px solid var(--gold)!important}
+.dim{opacity:.25}
+mark{background:rgba(245,200,66,.3);border-radius:2px;color:var(--text)}
+</style>
+</head>
+<body>
+<p><a href="index.html" style="color:var(--blue);text-decoration:none;padding:10px 16px;display:inline-block;">← Back to Table of Contents</a></p>
+<div class="header">
+  <h1>Local Bodies — <span>Panchayat & Municipalities</span></h1>
+  <p>SSC CGL · CHSL · MTS · NTPC · Group D — Parmar SSC Notes | 73rd &amp; 74th CA | Click nodes to expand · Search to filter</p>
+</div>
+<div class="controls">
+  <input type="text" id="srch" placeholder="🔍 Search article, committee, fact…" oninput="search(this.value)">
+  <button class="btn" onclick="setAll(true)">▼ Expand All</button>
+  <button class="btn" onclick="setAll(false)">▲ Collapse All</button>
+</div>
+<div class="tree"><ul id="root"></ul></div>
+
+<script>
+const T=[
+ {l:"🏘 Local Bodies — Panchayat & Municipalities",c:"l0",o:1,ch:[
+
+  {l:"📅 Evolution of Panchayati Raj — Committees",c:"lt",o:1,ch:[
+   {l:"Balwant Rai Mehta Committee, 1957",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+    {l:"Recommended: 3-Tier Panchayati Raj System",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Tier 1: Gram Panchayat (Village) | Tier 2: Panchayat Samiti (Block) | Tier 3: Zila Parishad (District)",c:"l3"},
+    {l:"Rajasthan: 1st state to implement at Nagaur — 2 Oct 1959",c:"l3",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Andhra Pradesh: 2nd state — 11 Oct 1959",c:"l3"}
+   ]},
+   {l:"Ashok Mehta Committee, 1977",c:"l2",b:[{t:"KEY",s:"b-key"}],ch:[
+    {l:"Proposed: 2-Tier System",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Tier 1: Zila Parishad (main unit) | Tier 2: Mandal Panchayat",c:"l3"}
+   ]},
+   {l:"G.V.K. Rao Committee, 1985",c:"l2",ch:[
+    {l:"Reviewed working of Constitution in relation to Panchayats & Municipalities",c:"l3"},
+    {l:"Proposed: Zila Parishad as Nodal Agency for development",c:"l3"}
+   ]},
+   {l:"L. M. Singhvi Committee, 1986",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+    {l:"1st to recommend CONSTITUTIONAL STATUS for PRIs",c:"l3",b:[{t:"IMP",s:"b-imp"}]},
+    {l:"Advocated for financial autonomy of Panchayats",c:"l3"},
+    {l:"Called Gram Sabha 'embodiment of direct democracy'",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Recommended Nyaya Panchayats for cluster of villages",c:"l3"}
+   ]},
+   {l:"Thungon Committee, 1988 + Gadgil Committee, 1988",c:"l2",ch:[
+    {l:"Members at ALL 3 levels should be directly elected",c:"l3"},
+    {l:"Fixed term of 5 years + Reservation for SC, ST, Women",c:"l3"}
+   ]}
+  ]},
+
+  {l:"🔢 73rd CA, 1992 — Panchayati Raj",c:"la",o:1,ch:[
+   {l:"Made it mandatory to establish Panchayati Raj institutions",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"Inserted: Part IX | Articles: 243 to 243-O",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"Added: 11th Schedule — 29 Functional Items",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"Enforced: 24 April 1993 → Panchayati Raj Day",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"Then PM: P. V. Narasimha Rao",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"3-Tier Structure",c:"l2",ch:[
+    {l:"Village Level → Gram Sabha + Gram Panchayat",c:"l3"},
+    {l:"Block Level → Panchayat Samiti + Nyaya Panchayat",c:"l3"},
+    {l:"District Level → Zila Parishad",c:"l3"}
+   ]},
+   {l:"Intermediate tier NOT needed if state population ≤ 20 lakhs (Art. 243B)",c:"l2",b:[{t:"KEY",s:"b-key"}]}
+  ]},
+
+  {l:"📋 Articles 243 to 243-O — Panchayats",c:"lb",o:0,ch:[
+   {l:"Art. 243 — Definition: Gram Sabha = persons registered in electoral rolls of a village",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"Art. 243A — Gram Sabha exercises powers at village level as State Legislature provides",c:"l2"},
+   {l:"Art. 243B — Constitution of 3-Tier Panchayats in every state",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"Art. 243C — Composition: All seats filled by DIRECT election",c:"l2",ch:[
+    {l:"Village level Chairperson: elected as State Legislature provides",c:"l3"},
+    {l:"Intermediate + District level Chairperson: INDIRECT election",c:"l3",b:[{t:"KEY",s:"b-key"}]}
+   ]},
+   {l:"Art. 243D — Reservation: SC/ST (proportional to population) + 1/3rd for Women",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"Art. 243E — Duration: 5-year term",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+    {l:"Election before end of 5-year term",c:"l3"},
+    {l:"If dissolved early: election within 6 months",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+    {l:"If remaining term < 6 months: election NOT mandatory",c:"l3",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"Reconstituted Panchayat serves ONLY remainder of original term",c:"l3",b:[{t:"KEY",s:"b-key"}]}
+   ]},
+   {l:"Art. 243F — Disqualification: by State Legislature law | Min age = 21 years",c:"l2",ch:[
+    {l:"Cannot be disqualified if below 25 years (min age is 21, not 25)",c:"l3",b:[{t:"TRAP",s:"b-imp"}]},
+    {l:"Election disputes of MPs/MLAs → High Court",c:"l3"}
+   ]},
+   {l:"Art. 243G — Power + Authority + Responsibilities of Panchayats (given by State Legislature)",c:"l2"},
+   {l:"Art. 243H — Power to impose taxes, duties, tolls, fees (authorised by State Legislature)",c:"l2"},
+   {l:"Art. 243-I — Finance Commission by Governor to review financial position",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"Art. 243J — Audit of Accounts of Panchayats",c:"l2"},
+   {l:"Art. 243K — Elections conducted by State Election Commission",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+    {l:"State Election Commissioner appointed by Governor",c:"l3",b:[{t:"KEY",s:"b-key"}]},
+    {l:"Removed same manner as a High Court Judge",c:"l3",b:[{t:"KEY",s:"b-key"}]}
+   ]},
+   {l:"Art. 243L — Provisions apply to UTs with modifications",c:"l2"},
+   {l:"Art. 243M — NOT applicable to: Nagaland, Meghalaya, Mizoram | Hill areas of Manipur (District Council exists)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"Delhi: only UT where Panchayat provisions are NOT applicable",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"Art. 243N — Continuance of existing laws during transition",c:"l2"},
+   {l:"Art. 243O — Bar to court interference in electoral matters (constituencies/seats)",c:"l2"},
+   {l:"PESA Act, 1996 — extends Part IX provisions to 5th Schedule (Scheduled Areas)",c:"l2",b:[{t:"KEY",s:"b-key"}]}
+  ]},
+
+  {l:"🏙 74th CA, 1992 — Municipalities",c:"lp",o:0,ch:[
+   {l:"Introduced: Part IXA | Articles: 243P to 243ZG",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"Added: 12th Schedule — 18 Functional Items",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"3 Types of Municipalities",c:"l2",b:[{t:"IMP",s:"b-imp"}],ch:[
+    {l:"1. Nagar Panchayat — for a Transitional Area (e.g. Kalyanpur)",c:"l3"},
+    {l:"2. Municipal Council — for a Small Urban Area (e.g. Chhindwara)",c:"l3"},
+    {l:"3. Municipal Corporation — for a Larger Urban Area (e.g. Indore)",c:"l3"}
+   ]},
+   {l:"8 Types of Urban Local Govt Bodies",c:"l2",b:[{t:"KEY",s:"b-key"}],ch:[
+    {l:"1. Municipal Corporation | 2. Municipality | 3. Notified Area Committee",c:"l3"},
+    {l:"4. Cantonment Board (Military) | 5. Township | 6. Town Area Committee",c:"l3"},
+    {l:"7. Port Trust | 8. Special Purpose Agency",c:"l3"}
+   ]},
+   {l:"All seats filled through DIRECT elections",c:"l2"},
+   {l:"Elections conducted by: State Election Commission",c:"l2",b:[{t:"KEY",s:"b-key"}]}
+  ]},
+
+  {l:"👤 Key Historical Facts — Municipalities",c:"lc",o:0,ch:[
+   {l:"1st Municipal Corporation: Madras, 1687–1688",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"Municipal Corporations in Calcutta & Bombay: 1726",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"1870 — Lord Mayo: Resolution of Financial Decentralisation",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"1882 — Lord Ripon's Resolution = 'Magna Carta of Local Self-Government'",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"Lord Ripon = 'Father of Local Self-Government'",c:"l2",b:[{t:"IMP",s:"b-imp"}]}
+  ]},
+
+  {l:"📋 Articles 243P to 243ZG — Municipalities",c:"lb",o:0,ch:[
+   {l:"Art. 243P — Definitions",c:"l2"},
+   {l:"Art. 243Q — Constitution of Municipalities",c:"l2"},
+   {l:"Art. 243R — Composition of Municipalities",c:"l2"},
+   {l:"Art. 243S — Wards Committees constitution and composition",c:"l2"},
+   {l:"Art. 243T — Reservation of seats",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"Art. 243U — Duration of Municipalities (5 years)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"Art. 243V — Disqualifications for membership",c:"l2"},
+   {l:"Art. 243W — Powers, authority, responsibilities of Municipalities",c:"l2"},
+   {l:"Art. 243X — Power to impose taxes + Funds",c:"l2"},
+   {l:"Art. 243Y — Finance Commission",c:"l2"},
+   {l:"Art. 243Z — Audit of accounts",c:"l2"},
+   {l:"Art. 243ZA — Elections to Municipalities",c:"l2"},
+   {l:"Art. 243ZD — Committee for District Planning",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"Art. 243ZE — Committee for Metropolitan Planning",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"Art. 243ZG — Bar to court interference in electoral matters",c:"l2"}
+  ]},
+
+  {l:"🤝 Part IXB — Co-operative Societies",c:"lg",o:0,ch:[
+   {l:"Inserted by: 97th Constitutional Amendment Act, 2011",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"Articles: 243ZH to 243ZT",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"Grants constitutional status and protection to Co-operative Societies",c:"l2"},
+   {l:"Covers: formation, regulation, and functioning of Co-operative Societies",c:"l2"}
+  ]},
+
+  {l:"🧠 Article Trick — A to O (Panchayat)",c:"lg",o:0,ch:[
+   {l:"243 = Definition",c:"l2"},
+   {l:"243A = Assembly (Gram Sabha)",c:"l2"},
+   {l:"243B = Banana (Constitute karna — Constitution of Panchayats)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"243C = Composition",c:"l2"},
+   {l:"243D = Dalit (Reservation for SC/ST/Women)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"243E = Duration 5 Years (E = 5th letter)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"243F = Fail (Disqualification)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"243G = Goli Khake Power aa gayi (Powers of Panchayat)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"243H = House Tax (Power to impose taxes)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"243-I = Income (Finance Commission)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"243J = Jaanch (Audit)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"243K = Kiske Elections (State Election Commission)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"243L = Lieutenant Governor (UTs)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"243M = Modifications (exclusions — NE states)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"243N = Continuance of existing laws",c:"l2"},
+   {l:"243O = Bar to court interference",c:"l2"}
+  ]},
+
+  {l:"⚡ Ultra Quick Revision — Top 20 Facts",c:"lr",o:0,ch:[
+   {l:"1. Balwant Rai Mehta (1957) → 3-Tier system | Ashok Mehta (1977) → 2-Tier",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"2. L.M. Singhvi (1986) → 1st to recommend Constitutional Status for PRIs",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"3. Rajasthan → 1st state to implement Panchayati Raj at Nagaur, 2 Oct 1959",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"4. 73rd CA 1992 → Part IX, Art. 243 to 243-O, 11th Schedule (29 items)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"5. 74th CA 1992 → Part IXA, Art. 243P–243ZG, 12th Schedule (18 items)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"6. Panchayati Raj Day = 24 April 1993 (enforcement date of 73rd CA)",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"7. PM during 73rd CA: P. V. Narasimha Rao",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"8. Gram Sabha = embodiment of direct democracy (Singhvi Committee)",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"9. Art. 243D: 1/3rd reservation for women + SC/ST proportional",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"10. Term of Panchayat = 5 years | If dissolved → election within 6 months",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"11. State Election Commissioner appointed by Governor | removed like HC Judge",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"12. Minimum age for Panchayat membership = 21 years",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"13. NOT applicable: Nagaland, Meghalaya, Mizoram | Delhi = only UT excluded",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"14. PESA Act 1996 → extends Part IX to 5th Schedule (Scheduled Areas)",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"15. 1st Municipal Corporation: Madras, 1687–88 | Calcutta & Bombay: 1726",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"16. Lord Ripon 1882 = Magna Carta of Local Self-Govt = Father of Local Self-Govt",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"17. 3 Types of Municipalities: Nagar Panchayat + Municipal Council + Municipal Corporation",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"18. 8 types of Urban Local Govt bodies (Municipal Corp, Municipality, Cantonment Board...)",c:"l2",b:[{t:"KEY",s:"b-key"}]},
+   {l:"19. 97th CA 2011 → Part IXB, Art. 243ZH to 243ZT → Constitutional status to Co-operatives",c:"l2",b:[{t:"IMP",s:"b-imp"}]},
+   {l:"20. Intermediate tier not needed if state population ≤ 20 lakhs (Art. 243B)",c:"l2",b:[{t:"KEY",s:"b-key"}]}
+  ]},
+
+  {l:"⚠ Commonly Confused Concepts",c:"lc",o:0,ch:[
+   {l:"73rd CA = Panchayat (Part IX, 11th Schedule, 29 items) ≠ 74th CA = Municipalities (Part IXA, 12th Schedule, 18 items)",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+   {l:"Balwant Rai Mehta = 3-Tier ≠ Ashok Mehta = 2-Tier",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+   {l:"L.M. Singhvi (1986) = 1st to demand constitutional status ≠ Balwant Rai (1957) who created 3-tier",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+   {l:"Panchayati Raj Day = 24 April 1993 (enforcement) ≠ date of passing of 73rd CA",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+   {l:"Minimum age = 21 years ≠ 25 years (25 is for Lok Sabha, not Panchayat)",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+   {l:"State Election Commissioner removed like HC Judge ≠ like SC Judge",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+   {l:"Gram Sabha = direct democracy ≠ Gram Panchayat = representative body",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+   {l:"11th Schedule = 29 items (Panchayat) ≠ 12th Schedule = 18 items (Municipality)",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+   {l:"Lord Ripon 1882 = Magna Carta of Local Self-Govt ≠ Lord Mayo 1870 = Financial Decentralisation",c:"l2",b:[{t:"TRAP",s:"b-imp"}]},
+   {l:"97th CA = Co-operative Societies ≠ 73rd/74th CA = Panchayat/Municipality",c:"l2",b:[{t:"TRAP",s:"b-imp"}]}
+  ]},
+
+  {l:"🧠 Mnemonics & Memory Aids",c:"lg",o:0,ch:[
+   {l:"73rd = 3-Tier (7+3=10, 3-tier | 74th = city/urban, 7+4=11 ≈ cities have more digits)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"Committees in order: BMA → B(alwant 1957) M(ehta Ashok 1977) → A(GVK Rao 1985) → S(inghvi 1986) → T(hungon+Gadgil 1988)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"11th Schedule = 29 items → remember '29' = 2+9=11 (11th schedule!)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"12th Schedule = 18 items → 1+8=9, but cities are urban (12th = city = remember by exclusion)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"Panchayati Raj Day = 24 April → 2+4 = 6 tiers imagined (easy date to remember: 24/4/93)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"Ripon = 'R'aja of Local Self-Govt (Father) | Mayo = 'M'oney (Financial Decentralisation)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"3 types of Municipalities = NMM: Nagar Panchayat + Municipal Council + Municipal Corporation (small→big)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]},
+   {l:"PESA 1996 = Panchayat Extension to Scheduled Areas = P-E-S-A (easy acronym)",c:"l2",b:[{t:"TRICK",s:"b-ok"}]}
+  ]}
+
+ ]}
+];
+
+function build(data,ul){
+  data.forEach(d=>{
+    const li=document.createElement('li');
+    li.style.marginBottom='3px';
+    const row=document.createElement('div');
+    row.className='row '+d.c;
+    const arr=document.createElement('span');
+    arr.className='arrow';
+    arr.textContent=d.ch&&d.ch.length?'▶':' ';
+    if(d.o)arr.classList.add('open');
+    const pill=document.createElement('span');
+    pill.className='pill';
+    const txt=document.createElement('span');
+    txt.className='ntext';
+    txt.textContent=d.l;
+    pill.appendChild(txt);
+    if(d.b){d.b.forEach(b=>{const s=document.createElement('span');s.className='badge '+b.s;s.textContent=b.t;pill.appendChild(s);});}
+    row.appendChild(arr);row.appendChild(pill);
+    li.appendChild(row);
+    if(d.ch&&d.ch.length){
+      const sub=document.createElement('ul');
+      sub.className='children'+(d.o?'':' closed');
+      build(d.ch,sub);
+      li.appendChild(sub);
+      row.addEventListener('click',()=>{
+        const cl=sub.classList.contains('closed');
+        sub.classList.toggle('closed',!cl);
+        arr.classList.toggle('open',cl);
+      });
+    }
+    ul.appendChild(li);
+  });
+}
+function setAll(open){
+  document.querySelectorAll('.children').forEach(e=>e.classList.toggle('closed',!open));
+  document.querySelectorAll('.arrow').forEach(a=>{if(a.textContent!=' ')a.classList.toggle('open',open);});
+}
+function search(q){
+  q=q.trim().toLowerCase();
+  const rows=document.querySelectorAll('.row');
+  if(!q){
+    rows.forEach(r=>{r.classList.remove('hl','dim');const t=r.querySelector('.ntext');t.innerHTML=t.textContent;});
+    return;
+  }
+  rows.forEach(r=>{
+    const t=r.querySelector('.ntext');
+    const raw=t.textContent;
+    if(raw.toLowerCase().includes(q)){
+      r.classList.add('hl');r.classList.remove('dim');
+      const re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+      t.innerHTML=raw.replace(re,'<mark>$1</mark>');
+      let p=r.closest('.children');
+      while(p){p.classList.remove('closed');const prev=p.previousElementSibling;if(prev){const a=prev.querySelector('.arrow');if(a)a.classList.add('open');}p=p.parentElement&&p.parentElement.closest('.children');}
+    } else {
+      r.classList.remove('hl');r.classList.add('dim');t.innerHTML=raw;
+    }
+  });
+}
+build(T,document.getElementById('root'));
+</script>
+</body>
+</html>
